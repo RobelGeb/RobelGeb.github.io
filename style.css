@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-div.code {
+p.code {
     background-color: cornsilk;
     font-size: 16px;
 }
