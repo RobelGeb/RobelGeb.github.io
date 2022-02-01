@@ -23,11 +23,40 @@
             <h2>Firmware running the lights and button!</h2>
             <p>
                 <code>
-                    const int
-                    hello 
-                    void setup () {
-                        //initialized
-                    }
+                        //constants
+                        const int photores = A0; // photoresistor @ A0
+                        
+                        LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //LCD display
+                        
+                        //Variables
+                        int value;				  // stores analog value from photoresistor
+                        
+                        void setup(){
+                         Serial.begin(9600); // begins monitoring 
+                         pinMode(photores, INPUT); // Set photores as input
+                         lcd.begin(16, 2); // sets cursor at 16,2 on LCD display
+                         lcd.print("let there b lite"); // initializes message 
+                        }
+                        
+                    </br> void loop(){
+                          lcd.clear(); // clears display at the start of every loop in case analog val changes
+                        
+                          value = analogRead(photores); // stores analog photores value
+                          
+                          Serial.print("Analog value : "); //prints analog value 
+                          Serial.println(value);
+                        
+                          // if no light reaches the photoresistor the LCD screen displays 
+                          // "DARKNESS", if not it goes back to original message 
+                          if (value == 0){
+                            lcd.print("DARKNESS");
+                          }
+                          else{
+                            lcd.print("let there b lite");
+                          }
+                        
+                          delay(500); //Small delay between loops
+                        }
                 </code>
             </p>
             <p>The firmware used to control the lights was programmed in Arduino! I initialized the pins as outputs and</p>
