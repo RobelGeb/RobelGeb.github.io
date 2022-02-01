@@ -25,36 +25,36 @@
                 <code>
                         </br>//constants
                         </br>const int photores = A0; // photoresistor @ A0
-                        
+                        <br>
                         </br>LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //LCD display
-                        
+                        </br>
                         </br>//Variables
                         </br>int value;				  // stores analog value from photoresistor
-                        
+                        </br>
                         </br>void setup(){
                          </br>Serial.begin(9600); // begins monitoring 
                          </br>pinMode(photores, INPUT); // Set photores as input
                          </br>lcd.begin(16, 2); // sets cursor at 16,2 on LCD display
                          </br>lcd.print("let there b lite"); // initializes message 
-                        }
-                        
+                        </br>}
+                        </br>
                     </br> void loop(){
                           </br>lcd.clear(); // clears display at the start of every loop in case analog val changes
-                        
+                        </br>
                           </br>value = analogRead(photores); // stores analog photores value
-                          
+                        </br>
                           </br>Serial.print("Analog value : "); //prints analog value 
                           </br>Serial.println(value);
-                        
+                        </br>
                           </br>// if no light reaches the photoresistor the LCD screen displays 
                           </br>// "DARKNESS", if not it goes back to original message 
                           </br>if (value == 0){
-                            </br>lcd.print("DARKNESS");
+                          </br>  lcd.print("DARKNESS");
                           </br>}
                           </br>else{
-                            </br>lcd.print("let there b lite");
+                          </br>  lcd.print("let there b lite");
                           </br>}
-                        
+                        </br>
                           </br>delay(500); //Small delay between loops
                         </br>}
                 </code>
