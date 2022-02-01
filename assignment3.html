@@ -19,7 +19,7 @@
             <p>I used a 220 ohm resistor for the LCD screen and a 10K ohm resistor for the potentiometer and photoresistor. The</p>
             <p>potentiometer controls the contrast ratio of the LCD display and the photoresistor controls the message on the screen.</p>
         </div>
-        <div >
+        <div width=700px>
             <h2>Firmware running the lights and button!</h2>
             <p class="code">
                 <code>
@@ -42,10 +42,11 @@
                     </br> void loop(){
                           </br>lcd.clear(); // clears display at the start of every loop in case analog val changes
                         </br>
-                          </br>value = analogRead(photores); // stores analog photores value
+                        </br>value = analogRead(photores); // stores analog photores value
+                        </br>value = map(value, 0, 1023, 0, 255); // maps the analog value
                         </br>
-                          </br>Serial.print("Analog value : "); //prints analog value 
-                          </br>Serial.println(value);
+                        </br>Serial.print("Analog value : "); //prints analog value 
+                        </br>Serial.println(value);
                         </br>
                           </br>// if no light reaches the photoresistor the LCD screen displays 
                           </br>// "DARKNESS", if not it goes back to original message 
