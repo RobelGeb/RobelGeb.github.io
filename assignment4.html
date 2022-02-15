@@ -56,33 +56,33 @@ void setup(){
 void loop(){
     //if there is any motion, move the motor
     if(digitalRead(motionPin) == HIGH){
-    myservo.write(20);
-    delay(500);
-    myservo.write(110);
-    //if there is no motion, report new motion and record
-    //downtime when the program sees there is no motion
-    if(nomotion == true){
-        nomotion = false;
-        Serial.println();
-        Serial.print("MOTION AFTER ");
-        Serial.print(millis()/1000);
-        Serial.println(" SECONDS");
-        delay(50);
-    }
-    takeDowntime = true;
+        myservo.write(20);
+        delay(500);
+        myservo.write(110);
+        //if there is no motion, report new motion and record
+        //downtime when the program sees there is no motion
+        if(nomotion == true){
+            nomotion = false;
+            Serial.println();
+            Serial.print("MOTION AFTER ");
+            Serial.print(millis()/1000);
+            Serial.println(" SECONDS");
+            delay(50);
+        }
+        takeDowntime = true;
     }
     
     //if there is no motion readings, take the time between readings
     if(digitalRead(motionPin) == LOW){
-    if(takeDowntime){
-        downtime = millis(); //saving the time after sensor reading went from HIGH to LOW
-        takeDowntime = false;
-    }
-    
-    //if the sensor doesn't read anything for at least 5 seconds, keep going
-    if(!nomotion && millis() - downtime > 5000){
-        nomotion = true;
-    }
+        if(takeDowntime){
+            downtime = millis(); //saving the time after sensor reading went from HIGH to LOW
+            takeDowntime = false;
+        }
+        
+        //if the sensor doesn't read anything for at least 5 seconds, keep going
+        if(!nomotion && millis() - downtime > 5000){
+            nomotion = true;
+        }
     }
 }                        
                     </textarea>
