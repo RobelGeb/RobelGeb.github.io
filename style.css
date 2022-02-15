@@ -9,4 +9,5 @@ p.code {
     width: 700px;
     background-color: cornsilk;
     font-size: 16px;
+    flex-wrap: wrap;
 }
