@@ -11,3 +11,7 @@ p.code {
     font-size: 16px;
     flex-wrap: wrap;
 }
+textarea {
+    min-width: auto;
+    min-height: auto;
+}
