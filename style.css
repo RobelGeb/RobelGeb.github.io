@@ -12,6 +12,6 @@ p.code {
     flex-wrap: wrap;
 }
 textarea {
-    min-width: auto;
-    min-height: auto;
+    min-width: 700px;
+    min-height: 600px;
 }
