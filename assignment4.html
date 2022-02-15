@@ -18,8 +18,7 @@
             <p>The circuit was powered with 5V through USB and I used the Servo SG90 motor and the HC-SR501 motion sensor, both of which were from our kits.            </p>
         </div>
         <div>
-            <h2>Firmware running the lights and button!</h2>
-            <p class="code">
+            <h2>Firmware running the motion sensor and motor!</h2>
                 <textarea>
 #include <Servo.h> //library for motor
 
@@ -87,9 +86,10 @@ void loop(){
     }
 }                        
                     </textarea>
+            <p>I programmed my arduino to use a motion sensor to turn on a small motor when it detected any motion. It also outputs </br>
+                a message every time it detects movement. To calibrate the motion sensor I allowed it to wait for 30 seconds (recommended</br>
+                 time is 30-60 sec) and then tested it once the time was complete.
             </p>
-            <p>The firmware used to control the LCD screen was programmed in Arduino! I used the screen to display the status </p>
-            <p>of light in the room, and I tested it by artificially blocking the sensor from any light with my finger (as seen below).</p>
         </div>
         <div>
             <h2>Final circuit result!</h2>
