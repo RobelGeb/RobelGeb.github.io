@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>HCDE 439 Assignment 5</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div>
+            <h2>Schematic for my circuit!</h2>
+            <p>
+                <img src="img/a4/a4_schematic.png" width=600>
+            </p>
+            <p>The circuit was powered with a 9V battery through the Vin pin and the modules I used are the FQP 30N06 MOSFET</p>
+            <p>transistor, a diode, a 10k Ohm resistor an IR sensor and remote, and a DC motor + fan combo.</p>
+            <p>Currently, I am unable to find a solution on how to work both the IR sensor and DC motor at the same time.</p>
+            <p>They seem to be interfering with each other, so the motor will not turn on as long as the IR sensor is active.</p>
+        </div>
+        <div>
+            <h2>Firmware running the IR sensor and motor!</h2>
+                <textarea>
+#include <IRremote.h> //library for ir remote
+#define code1 0 //defining the hexcode for ir remote
+
+//constants to assign ir and motor control pins
+const int irpin = 13;
+const int motor = 3;
+
+//setting up ir and results objects
+IRrecv irrecv(irpin);
+decode_results results;
+
+//variable to track speed of motor
+int speed = 0;
+
+//variable to keep track of off/on status
+boolean status = false;
+
+void setup() {
+    Serial.begin(9600); //start serial output
+    irrecv.enableIRIn(); //start ir sensor
+    pinMode(motor, OUTPUT); //assigning motor variable 
+}
+
+void loop() {
+
+    //ir signal is received
+    if (irrecv.decode()) {
+    unsigned int value = results.value;
+    switch(value) {
+        //if POWER button is pressed 
+        case code1:
+        //if the fan is already on, sets status to off and turns off fan
+        if (status) {
+            Serial.println("OFF");
+            analogWrite(motor, 0);
+            status = false;
+        } 
+        //if the fan is off, sets status to on and gradually turns fan on
+        else {
+            Serial.println("ON");
+            analogWrite(motor, 200);
+            for(speed = 0; speed <= 255; speed += 50) {
+            analogWrite(motor, speed);
+            delay(100);
+            }
+            status = true;
+        }
+        break;
+    }    
+    }
+    //accepts more ir input
+    irrecv.resume();
+}
+                    </textarea>
+            <p>I programmed my arduino to use a motion sensor to turn on a small motor when it detected any motion. It also outputs </br>
+                a message every time it detects movement. To calibrate the motion sensor I allowed it to wait for 30 seconds (recommended</br>
+                 time is 30-60 sec) and then tested it once the time was complete.
+            </p>
+        </div>
+        <div>
+            <h2>Final circuit result!</h2>
+            <p>
+            <img src="img/a5/circuit.jpg" width="800">
+            </p>
+            <p></p>
+        </div>
+    </body> 
+</html>
