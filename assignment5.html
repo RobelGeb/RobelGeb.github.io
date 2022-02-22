@@ -13,7 +13,7 @@
         <div>
             <h2>Schematic for my circuit!</h2>
             <p>
-                <img src="img/a4/a4_schematic.png" width=600>
+                <img src="img/a5/schematic.png" width=600>
             </p>
             <p>The circuit was powered with a 9V battery through the Vin pin and the modules I used are the FQP 30N06 MOSFET</p>
             <p>transistor, a diode, a 10k Ohm resistor an IR sensor and remote, and a DC motor + fan combo.</p>
@@ -77,10 +77,8 @@ void loop() {
     irrecv.resume();
 }
                     </textarea>
-            <p>I programmed my arduino to use a motion sensor to turn on a small motor when it detected any motion. It also outputs </br>
-                a message every time it detects movement. To calibrate the motion sensor I allowed it to wait for 30 seconds (recommended</br>
-                 time is 30-60 sec) and then tested it once the time was complete.
-            </p>
+            <p>I programmed my arduino to use an IR reciever to turn on a DC motor when the power button is pressed on an IR remote.</p>
+            <p>If the motor is already on, pressing the power button again will turn the motor off.</p>
         </div>
         <div>
             <h2>Final circuit result!</h2>
