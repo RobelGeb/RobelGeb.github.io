@@ -1,5 +1,5 @@
 var serial; // variable to hold an instance of the serialport library
-var portName = 'COM5' //rename to the name of your port
+var portName = 'dev/ttyCOM5' //rename to the name of your port
 var datain; //some data coming in over serial!
 var xPos = 0;
 
@@ -47,7 +47,7 @@ function portClose() {
 function serialEvent() {
   if (serial.available()) {
   	datain = Number(serial.readLine());
-        //console.log(datain);
+      console.log(datain);
   } 
 }
 
