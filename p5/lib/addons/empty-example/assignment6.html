@@ -18,15 +18,15 @@
     <div>
       <h2>Schematic for my circuit!</h2>
       <p>
-          <img src="img/a5/schematic.png" width=600>
+          <img src="img/schematic.png" width=900>
       </p>
-      <p>The circuit was powered with a 9V battery through the Vin pin and the modules I used are the FQP 30N06 MOSFET</p>
-      <p>transistor, a diode, a 10k Ohm resistor an IR sensor and remote, and a DC motor + fan combo.</p>
-      <p>Currently, I am unable to find a solution on how to work both the IR sensor and DC motor at the same time.</p>
-      <p>They seem to be interfering with each other, so the motor will not turn on as long as the IR sensor is active.</p>
+      <p>The circuit was powered using a USB connected to my motherboard. I used an RGB LED with 3 220 Ohm resistors </p>
+      <p>and two potentiometers both with 10k Ohm resistors in my circuit. Analog signals were sent from my arduino to</p>
+      <p>the cavas where I was able to convert them to coordinates. A signal can also be recieved and it changes the color</p>
+      <p>of the RGB LED.</p>
   </div>
   <div>
-      <h2>Firmware running the IR sensor and motor!</h2>
+      <h2>Firmware running the site and the RGB LED!</h2>
           <textarea>
 //JAVASCRIPT CODE
 var serial; // variable to hold an instance of the serialport library
@@ -171,15 +171,20 @@ void loop() {
 }
 
         </textarea>
-        <p>I programmed my arduino to use an IR reciever to turn on a DC motor when the power button is pressed on an IR remote.</p>
-            <p>If the motor is already on, pressing the power button again will turn the motor off.</p>
+        <p>I programmed my arduino to use two potentiometers to emulate and online version of an etch-a-sketch. One knob used changed the x</p>
+        <p>coordinates while the other changed the y coordinates. There is also a "CLEAR" button which the user can press to clear any drawings</p>
+        <p>currently on the canvas. Lastly, if the user ends up reaching the edge of the canvas with the knobs, the RGB LED will go from green</p>
+        <p>to red, signifying that the user must change direction in order to keep drawing. The LED will stay red until the "pen" is moved away from the edge.</p>
         </div>
         <div>
             <h2>Final circuit result!</h2>
             <p>
-            <img src="img/a5/circuit.jpg" width="800">
+            <img src="img/circuit.jpg" width="800"> </br>
+            <img src="img/circuit_operation.gif" width=800>
+            <img src="img/circuit_operation_clear.gif" width=800>
             </p>
-            <p></p>
+            <p>The first gif shows the scenario when the user reaches the edge of the canvas and the LED turns red to notify them.</p>
+            <p>The second gif shows the clearing function where users can press the "CLEAR" button and wipe the canvas for more drawings.</p>
         </div>
     <script src="sketch.js"></script>
     <button id="myBtn" type="button">CLEAR</button>
