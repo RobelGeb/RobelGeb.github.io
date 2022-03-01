@@ -1,0 +1,17 @@
+header {
+    display: flex;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+p.code {
+    width: 700px;
+    background-color: cornsilk;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+textarea {
+    min-width: 700px;
+    min-height: 600px;
+}
