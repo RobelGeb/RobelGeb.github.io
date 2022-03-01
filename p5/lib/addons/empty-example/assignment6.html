@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+    <title>HCDE 439 Assignment 6</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -14,6 +14,173 @@
   </head>
 
   <body>
+
+    <div>
+      <h2>Schematic for my circuit!</h2>
+      <p>
+          <img src="img/a5/schematic.png" width=600>
+      </p>
+      <p>The circuit was powered with a 9V battery through the Vin pin and the modules I used are the FQP 30N06 MOSFET</p>
+      <p>transistor, a diode, a 10k Ohm resistor an IR sensor and remote, and a DC motor + fan combo.</p>
+      <p>Currently, I am unable to find a solution on how to work both the IR sensor and DC motor at the same time.</p>
+      <p>They seem to be interfering with each other, so the motor will not turn on as long as the IR sensor is active.</p>
+  </div>
+  <div>
+      <h2>Firmware running the IR sensor and motor!</h2>
+          <textarea>
+//JAVASCRIPT CODE
+var serial; // variable to hold an instance of the serialport library
+var portName = 'COM5' //rename to the name of your port
+var dataarray = []; //array for signal readings
+var x; //variables for coordinates
+var y;
+
+
+function setup() {
+  serial = new p5.SerialPort();       // make a new instance of the serialport library
+  serial.on('list', printList);       // set a callback function for the serialport list event
+  serial.on('connected', serverConnected); // callback for connecting to the server
+  serial.on('open', portOpen);        // callback for the port opening
+  serial.on('data', serialEvent);     // callback for when new data arrives
+  serial.on('error', serialError);    // callback for errors
+  serial.on('close', portClose);      // callback for the port closing
+  
+  serial.list();                      // list the serial ports
+  serial.open(portName);              // open a serial port
+  createCanvas(500, 500);
+  background(100, 100, 100);
+}
+  
+// get the list of ports:
+function printList(portList) {
+  // portList is an array of serial port names
+  for (var i = 0; i < portList.length; i++) {
+  // Display the list the console:
+    print(i + " " + portList[i]);
+  }
+}
+
+function serverConnected() {
+  print('connected to server.');
+}
+  
+function portOpen() {
+  print('the serial port opened.')
+}
+  
+function serialError(err) {
+  print('Something went wrong with the serial port. ' + err);
+}
+  
+function portClose() {
+  print('The serial port closed.');
+}
+
+function serialEvent() {
+  if (serial.available()) {
+    var datastring = serial.readLine(); // readin some serial
+    var newarray; 
+    try {
+      newarray = JSON.parse(datastring); // can we parse the serial
+      } catch(err) {
+          //console.log(err);
+    }
+    if (typeof(newarray) == 'object') {
+      dataarray = newarray;
+    }
+    //maps coordinates for use in canvas
+    x = map(dataarray[0], 516, 1023, 0, width);
+    y = map(dataarray[1], 516, 1023, 0, height);
+    //if coordinates reach the edges of the canvas, send a signal 
+    //to the arduino to turn the led red until its moved back
+    if (x == width || x == 0 || y == 0 || y == height) {
+      serial.write(0);
+    } else {
+      serial.write(1);
+    }
+    console.log("got back " + x + " " + y);
+  } 
+}
+
+//draws small circles around the canvas that emulate a line
+function draw() {
+  noStroke();
+  fill(0);
+  ellipse(x, y, 5, 5);
+}
+        </textarea>
+        <textarea>
+//HTML CODE
+<script src="sketch.js"></script>
+<button id="myBtn" type="button">CLEAR</button>
+
+<script>
+  const myBtn = document.getElementById("myBtn");
+  myBtn.addEventListener("click", function(e) {
+    console.log("clicked");
+    const context = canvas.getContext('2d');
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    background(100, 100, 100);
+  });
+</script>
+
+//ARDUINO CODE
+//constants for assigning input and output pins
+const int potPinA = A0;     
+const int potPinB = A1;
+const int redLED = 6;
+const int greenLED = 5;
+const int blueLED = 3;
+//variables to hold the states of the potentiometers
+int stateA;       
+int stateB;
+
+void setup() {
+  Serial.begin(9600);
+  //two potentiometer inputs in the analog pins, one RGB LED with
+  //3 pins for each type of color.
+  pinMode(potPinA, INPUT);
+  pinMode(potPinB, INPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  pinMode(blueLED, OUTPUT);
+}
+
+void loop() {
+  analogWrite(greenLED, 255);
+  if (Serial.available() > 0) {
+    int input = Serial.read();
+    //if signal received is 0, flash a red light, otherwise show green
+    if (!input) {
+      analogWrite(greenLED, 0);
+      analogWrite(redLED, 255);
+    } else {
+      analogWrite(redLED, 0);
+      analogWrite(greenLED, 255);
+    }    
+  }
+  //send out the analog readings from the potentiometers
+  stateA = analogRead(potPinA);
+  stateB = analogRead(potPinB);
+  Serial.print("[");
+  Serial.print(stateA);
+  Serial.print(",");
+  Serial.print(stateB);
+  Serial.println("]");
+  delay(50);
+}
+
+        </textarea>
+        <p>I programmed my arduino to use an IR reciever to turn on a DC motor when the power button is pressed on an IR remote.</p>
+            <p>If the motor is already on, pressing the power button again will turn the motor off.</p>
+        </div>
+        <div>
+            <h2>Final circuit result!</h2>
+            <p>
+            <img src="img/a5/circuit.jpg" width="800">
+            </p>
+            <p></p>
+        </div>
     <script src="sketch.js"></script>
     <button id="myBtn" type="button">CLEAR</button>
 

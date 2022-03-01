@@ -1,7 +1,7 @@
 var serial; // variable to hold an instance of the serialport library
 var portName = 'COM5' //rename to the name of your port
-var dataarray = [];
-var x;
+var dataarray = []; //array for signal readings
+var x; //variables for coordinates
 var y;
 
 
@@ -57,8 +57,11 @@ function serialEvent() {
     if (typeof(newarray) == 'object') {
       dataarray = newarray;
     }
+    //maps coordinates for use in canvas
     x = map(dataarray[0], 516, 1023, 0, width);
     y = map(dataarray[1], 516, 1023, 0, height);
+    //if coordinates reach the edges of the canvas, send a signal 
+    //to the arduino to turn the led red until its moved back
     if (x == width || x == 0 || y == 0 || y == height) {
       serial.write(0);
     } else {
@@ -68,6 +71,7 @@ function serialEvent() {
   } 
 }
 
+//draws small circles around the canvas that emulate a line
 function draw() {
   noStroke();
   fill(0);
