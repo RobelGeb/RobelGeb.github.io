@@ -15,5 +15,17 @@
 
   <body>
     <script src="sketch.js"></script>
+    <button id="myBtn" type="button">CLEAR</button>
+
+    <script>
+      const myBtn = document.getElementById("myBtn");
+      myBtn.addEventListener("click", function(e) {
+        console.log("clicked");
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        background(100, 100, 100);
+      });
+    </script>
   </body>
+  
 </html>

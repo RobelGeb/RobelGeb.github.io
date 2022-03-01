@@ -1,7 +1,8 @@
 var serial; // variable to hold an instance of the serialport library
 var portName = 'COM5' //rename to the name of your port
-var datain; //some data coming in over serial!
-var xPos = 0;
+var dataarray = [];
+var x;
+var y;
 
 
 function setup() {
@@ -15,8 +16,8 @@ function setup() {
  
   serial.list();                      // list the serial ports
   serial.open(portName);              // open a serial port
-  createCanvas(1200, 800);
-  background(0x08, 0x16, 0x40);
+  createCanvas(500, 500);
+  background(100, 100, 100);
 }
  
 // get the list of ports:
@@ -46,35 +47,29 @@ function portClose() {
 
 function serialEvent() {
   if (serial.available()) {
-  	datain = Number(serial.readLine());
-      console.log(datain);
+    var datastring = serial.readLine(); // readin some serial
+    var newarray; 
+    try {
+      newarray = JSON.parse(datastring); // can we parse the serial
+      } catch(err) {
+          //console.log(err);
+    }
+    if (typeof(newarray) == 'object') {
+      dataarray = newarray;
+    }
+    x = map(dataarray[0], 516, 1023, 0, width);
+    y = map(dataarray[1], 516, 1023, 0, height);
+    if (x == width || x == 0 || y == 0 || y == height) {
+      serial.write(0);
+    } else {
+      serial.write(1);
+    }
+    console.log("got back " + x + " " + y);
   } 
 }
 
-function graphData(newData) {
-  // map the range of the input to the window height:
-  var yPos = map(newData, 0, 255, 0, height);
-  // draw the line in a pretty color:
-  stroke(255, 0, 80);
-  line(xPos, height, xPos, height - yPos);
-  // at the edge of the screen, go back to the beginning:
-  if (xPos >= width) {
-    xPos = 0;
-    // clear the screen by resetting the background:
-    background(0x08, 0x16, 0x40);
-  } else {
-    // increment the horizontal position for the next reading:
-    xPos++;
-  }
-}
-
 function draw() {
-  // background(0);
-  // fill(255);
-  graphData(datain);
-  // if (datain == 1) {
-  //     text("button pressed: YES", 30,30);
-  // } else {
-  //     text("button pressed: NO", 30,30);
-  // }
+  noStroke();
+  fill(0);
+  ellipse(x, y, 5, 5);
 }
