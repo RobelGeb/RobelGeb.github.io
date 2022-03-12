@@ -13,15 +13,15 @@
         <div>
             <h2>Schematic for my circuit!</h2>
             <p>
-                <img src="img/a5/schematic.png" width=600>
+                <img src="img/final/finalproj_images/final_schem.png" width=600>
             </p>
-            <p>The circuit was powered with a 9V battery through the Vin pin and the modules I used are the FQP 30N06 MOSFET</p>
-            <p>transistor, a diode, a 10k Ohm resistor an IR sensor and remote, and a DC motor + fan combo.</p>
-            <p>Currently, I am unable to find a solution on how to work both the IR sensor and DC motor at the same time.</p>
-            <p>They seem to be interfering with each other, so the motor will not turn on as long as the IR sensor is active.</p>
+            <p>The circuit was powered with a 5V through USB and includes a 3rd party 3W speaker</p>
+            <p>from Amazon and the HC-SR501 motion sensor included in our Arduino kits. The speaker</p>
+            <p>I purchased includes an impedance of 8 ohms, and since the current was only 5V it did </p>
+            <p>not require any added resistance!</p>
         </div>
         <div>
-            <h2>Firmware running the IR sensor and motor!</h2>
+            <h2>Firmware running the motion sensor and speaker!</h2>
                 <textarea>
 #include "pitches.h" //header file for pitches
 
@@ -196,33 +196,20 @@ void playNotes() {
 #define NOTE_D8  4699
 #define NOTE_DS8 4978                        
                     </textarea>
-            <p>I programmed my arduino to use an IR reciever to turn on a DC motor when the power button is pressed on an IR remote.</p>
-            <p>If the motor is already on, pressing the power button again will turn the motor off.</p>
+            <p>I programmed my arduino to use a motion sensor to activate when the lid of my box was lifted. When it activates, a 3W speaker plays the Harry Potter song "Hedwig's Theme".</p>
+            <p>I used the Tone library from Arduino to push the frequencies I needed to my speaker. The header file "pitches.h" was used to map frequencies to note names, ex. NOTE_C4 = 262.</p>
+            <p></p>
         </div>
         <div>
             <h2>Final circuit result!</h2>
-            <section class="gallery">
-                <div class="gallery__item">
-                  <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
-                  <img class="gallery__img" src="img/final/finalproj_images/box1.jpg" alt=""/>
-                  <label for="img-1" class="gallery__thumb"><img src="img/final/finalproj_images/box1.jpg" alt=""/></label>
-                </div>
-                <div class="gallery__item">
-                  <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
-                  <img class="gallery__img" src="img/final/finalproj_images/box2.jpg" alt=""/>
-                  <label for="img-2" class="gallery__thumb"><img src="img/final/finalproj_images/box2.jpg" alt=""/></label>
-                </div>
-                <div class="gallery__item">
-                  <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
-                  <img class="gallery__img" src="img/final/finalproj_images/inside_box.jpg" alt=""/>
-                  <label for="img-3" class="gallery__thumb"><img src="img/final/finalproj_images/inside_box.jpg" alt=""/></label>
-                </div>
-                <div class="gallery__item">
-                  <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
-                  <img class="gallery__img" src="img/final/finalproj_images/final_schem.png" alt=""/>
-                  <label for="img-4" class="gallery__thumb"><img src="img/final/finalproj_images/final_schem.png" alt=""/></label>
-                </div>
-              </section>
+            <p>
+                <img src="img/final/finalproj_images/box1.jpg" width="800">
+                <img src="img/final/finalproj_images/box2.jpg" width=800> <br />
+                <img src="img/final/finalproj_images/inside_box.jpg" width=800>
+                <video width="800" height="450" controls>
+                    <source src="img/final/finalvideo_compress.mp4" type="video/mp4">
+                </video>
+            </p>
         </div>
     </body> 
 </html>
