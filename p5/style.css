@@ -6,3 +6,30 @@ html, body {
 canvas {
   display: block;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  background-color: grey;
+  padding: 20px 20px 40px 40px;
+}
+
+li {
+  float: right;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+li:last-child {
+  float: left;
+}
+
+ul {
+  border-bottom: 2px;
+  border-color: black;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5rem;
+}
