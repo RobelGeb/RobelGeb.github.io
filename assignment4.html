@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>HCDE 439 Assignment 4</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div>
+            <h2>Schematic for my circuit!</h2>
+            <p>
+                <img src="img/a4/a4_schematic.png" width=600>
+            </p>
+            <p>The circuit was powered with 5V through USB and I used the Servo SG90 motor and the HC-SR501 motion sensor, both of which were from our kits.            </p>
+        </div>
+        <div>
+            <h2>Firmware running the motion sensor and motor!</h2>
+                <textarea>
+#include <Servo.h> //library for motor
+
+//constants
+const int calibration = 30;  //seconds the sensor is given to calibrate
+const int motionPin = 3;     //pin connected to the PIR sensor
+const int motorPin = 5;      //pin connected to the motor
+
+//variable for how long the sensor doesn't sense motion
+long unsigned int downtime;
+
+//booleans to determine whether or not there has been
+//motion and to record any down time
+boolean nomotion = true;
+boolean takeDowntime;
+
+//Servo motor object
+Servo myservo;
+
+void setup(){
+    Serial.begin(9600);
+    pinMode(motionPin, INPUT);
+    digitalWrite(motionPin, LOW);
+    myservo.attach(motorPin);
+    
+    //give the sensor some time to calibrate
+    Serial.print("calibrating ...");
+    for(int i = 0; i < calibration; i++){
+    Serial.print(".");
+    delay(1000);
+    }
+    Serial.println("CALIBRATION COMPLETE");
+}
+
+void loop(){
+    //if there is any motion, move the motor
+    if(digitalRead(motionPin) == HIGH){
+        myservo.write(20);
+        delay(500);
+        myservo.write(110);
+        //if there is no motion, report new motion and record
+        //downtime when the program sees there is no motion
+        if(nomotion == true){
+            nomotion = false;
+            Serial.println();
+            Serial.print("MOTION AFTER ");
+            Serial.print(millis()/1000);
+            Serial.println(" SECONDS");
+            delay(50);
+        }
+        takeDowntime = true;
+    }
+    
+    //if there is no motion readings, take the time between readings
+    if(digitalRead(motionPin) == LOW){
+        if(takeDowntime){
+            downtime = millis(); //saving the time after sensor reading went from HIGH to LOW
+            takeDowntime = false;
+        }
+        
+        //if the sensor doesn't read anything for at least 5 seconds, keep going
+        if(!nomotion && millis() - downtime > 5000){
+            nomotion = true;
+        }
+    }
+}                        
+                    </textarea>
+            <p>I programmed my arduino to use a motion sensor to turn on a small motor when it detected any motion. It also outputs </br>
+                a message every time it detects movement. To calibrate the motion sensor I allowed it to wait for 30 seconds (recommended</br>
+                 time is 30-60 sec) and then tested it once the time was complete.
+            </p>
+        </div>
+        <div>
+            <h2>Final circuit result!</h2>
+            <p>
+            <img src="img/a4/circuit_operation.gif" width=800>
+            <img src="img/a4/circuit.jpg" width="800">
+            </p>
+        </div>
+    </body> 
+</html>
