@@ -2,7 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #DAE0F2;
+    background-color: #383838;
+    color: white;
 }
 
 canvas {
@@ -32,6 +33,6 @@ h3 {
 }
 
 .navbar {
-    background-color: #576AB5;
+    background-color: #3bd8f7;
     color: white;
 }
