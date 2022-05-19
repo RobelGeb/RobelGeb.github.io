@@ -1,7 +1,8 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #DAE0F2;
 }
 
 canvas {
@@ -11,23 +12,26 @@ canvas {
 ul {
   list-style-type: none;
   margin: 0;
-  background-color: rgba(189, 169, 153, 0.589);
   padding: 20px 20px 40px 40px;
 }
 
 li {
   float: right;
   padding-left: 30px;
-
   font-size: 20px;
-  color:rgb(65, 62, 61);
-}
-
-li:last-child {
-  float: left;
 }
 
 h1 {
   text-align: center;
   padding-top: 5rem;
+}
+
+h3 {
+    float: left;
+    padding-left: 10px;
+}
+
+.navbar {
+    background-color: #576AB5;
+    color: white;
 }
