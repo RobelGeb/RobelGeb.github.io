@@ -18,8 +18,13 @@ ul {
 
 li {
   float: right;
-  padding-left: 30px;
   font-size: 20px;
+  border-bottom: 2px solid white;
+  width: 6rem;
+}
+
+li:first-child {
+  margin-left: 15px;
 }
 
 h1 {
@@ -33,6 +38,8 @@ h3 {
 }
 
 .navbar {
-    background-color: #3bd8f7;
-    color: white;
+  border-style: solid;
+  border-color: #B3F2F2;
+  border: 15px;
+  color: white;
 }
