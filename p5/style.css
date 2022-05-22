@@ -20,12 +20,17 @@ li {
   float: right;
   font-size: 20px;
   border-bottom: 2px solid white;
-  width: 6rem;
+  
 }
 
 li:first-child {
   margin-left: 15px;
   width: 5rem;
+}
+
+li.second-child {
+  margin-left: 15px;
+  width: 4rem;
 }
 
 h1 {
@@ -43,4 +48,15 @@ h3 {
   border-color: #B3F2F2;
   border: 15px;
   color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
 }
