@@ -47,6 +47,7 @@ h3 {
   float: left;
   font-size:x-large;
   margin-top: 15px;
+  border-bottom: 2px solid #5ec4ff;
 }
 
 .navbar {
