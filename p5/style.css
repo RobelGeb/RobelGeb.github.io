@@ -1,8 +1,8 @@
 html, body {
     margin: 0;
-    padding: 0;
+    padding-left: 5px;
     font-family: 'Montserrat', sans-serif;
-    background-color: #383838;
+    background-color: #444445;
     color: white;
 }
 
@@ -19,7 +19,7 @@ ul {
 li {
   float: right;
   font-size: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #5ec4ff;
   
 }
 
@@ -30,7 +30,7 @@ li:first-child {
 
 li.second-child {
   margin-left: 15px;
-  width: 4rem;
+  width: 3.9rem;
 }
 
 h1 {
@@ -40,11 +40,13 @@ h1 {
 
 h2 {
   text-decoration: underline;
+  text-decoration-color: #5ec4ff;
 }
 
 h3 {
-    float: left;
-    padding-left: 10px;
+  float: left;
+  font-size:x-large;
+  margin-top: 15px;
 }
 
 .navbar {
@@ -75,4 +77,18 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 2px;
+  border: solid 2px #5ec4ff;
+  padding: 20px;
+}
+
+p.code {
+  width: 700px;
+  background-color: cornsilk;
+  font-size: 16px;
+  flex-wrap: wrap;
+  color: black;
+}
+textarea {
+  min-width: 700px;
+  min-height: 600px;
 }
