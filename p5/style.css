@@ -4,6 +4,18 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #444445;
     color: white;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      background-color: black;
+  }
+  100% {
+      background-color: #444445;
+   }
 }
 
 canvas {
@@ -62,13 +74,23 @@ a {
   text-decoration: none;
 }
 
-.projects {
+.projectsA {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
-  grid-template-rows: 200px 400px;
+  
+  position: absolute;
+  top: 45%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.projectsB {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  
   position: absolute;
   top: 65%;
-  left: 53%;
+  left: 58%;
   transform: translate(-50%, -50%);
 }
 
@@ -77,9 +99,11 @@ a {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
   border: solid 2px #5ec4ff;
   padding: 20px;
+  width: 68rem;
 }
 
 p.code {
