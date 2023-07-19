@@ -9,8 +9,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css" />
-
+        <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
     </head> 
     <body> 
         <div class="navbar">
@@ -20,11 +21,47 @@
                 <li><b>Home</b></li> 
             </ul>
         </div>
-        <h1> Hello World, this is my portfolio!</h1>
-        <p class="description">
-            My name is Robel Gebremichael. I am currently a consulting analyst at Accenture, and I have just completed my undergraduate 
-            degree at the University of Washington Seattle for Human Centered Design and Engineering. <br>
-            Feel free to reach out to me via email at robelgebrem@gmail.com!
-        </p>
+        <h1 data-aos="fade-up"> Hello World, this is my portfolio!</h1>
+        <div data-aos="fade-left">
+            <p class="description" >
+                My name is Robel Gebremichael. I am currently a consulting analyst at Accenture, and I have just completed my undergraduate 
+                degree at the University of Washington Seattle for Human Centered Design and Engineering. <br>
+                Feel free to reach out to me via email at robelgebrem@gmail.com!
+            </p>
+        </div>
+
+        <h1 class="projects">Physical Computing Projects!</h1>
+        <p align="center">The links below document my experiences learning about physical computing with Arduino</p>
+        <div class="projectsA">
+            <div>
+                <a href="assignment1.html"><h2>Blink!</h2></a>
+            </div>
+            <div>
+                <a href="assignment2.html"><h2>Fade!</h2></a>
+            </div>
+            <div>
+                <a href="assignment3.html"><h2>I/O!</h2></a>
+            </div>
+            <div>
+                <a href="assignment4.html"><h2>Libraries!</h2></a>
+            </div>
+        </div>
+        <div class="projectsB">
+            <div>
+                <a href="assignment5.html"><h2>High(er) Voltage and Transistors!</h2></a>
+            </div>
+            <div>
+                <a href="p5/lib/addons/empty-example/index.html"><h2>Talking to the Web w/ P5!</h2></a>
+            </div>
+            <div>
+                <a href="final.html"><h2>Music Box!</h2></a>
+            </div>
+        </div>
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

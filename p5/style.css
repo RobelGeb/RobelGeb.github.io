@@ -48,6 +48,12 @@ li.second-child {
 h1 {
   text-align: center;
   padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.projects {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 h2 {
@@ -77,11 +83,9 @@ a {
 .projectsA {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
-  
-  position: absolute;
   top: 45%;
   left: 53%;
-  transform: translate(-50%, -50%);
+  
 }
 
 .projectsB {
