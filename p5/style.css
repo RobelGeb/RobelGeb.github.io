@@ -51,8 +51,7 @@ h1 {
 }
 
 .projects {
-  padding-top: 5rem;
-  padding-bottom: 0rem;
+  padding-top: 10rem;
 }
 
 h2 {
@@ -109,16 +108,28 @@ a {
 }
 
 .intro_p {
-  padding-bottom : 4rem;
-  height: 40rem;
+  padding-bottom : 8rem;
+  /* height: 40rem; */
+  height: calc(100% - 15px - 7rem + 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-.scroll {
-  font-size: 15pt;
+p {
+  padding-top: 4rem;
+  font-size: 12pt;
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;  
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0%{top:0px;} 
+  50%{top:100px;} 
+  100%{top:0px;}
 }
 
 p.code {
@@ -133,3 +144,7 @@ textarea {
   min-width: 700px;
   min-height: 600px;
 }
+
+
+
+
