@@ -1,21 +1,20 @@
 html, body {
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #e1e1e1;
-    color: white;
+    color: black;
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
   0% {
       background-color: black;
   }
   100% {
       background-color: #676767;
    }
-}
+} */
 
 canvas {
   display: block;
@@ -45,13 +44,40 @@ li.second-child {
 }
 
 h1 {
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
 }
 
 .projects {
+  display: flex;
   padding-top: 10rem;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.proj1, .proj2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  height: 20rem;
+  background-color: #ccc;
+  font-size: 24pt;
+  padding-bottom: 0.5%;
+  
+}
+
+.proj1 {
+  justify-content: flex-start;
+  padding-left: 0.5%;
+
+}
+
+.proj2 {
+  justify-content: flex-end;
+  padding-right: 0.5%;
 }
 
 h2 {
@@ -70,7 +96,7 @@ h3 {
   border-style: solid;
   border-color: #B3F2F2;
   border: 15px;
-  color: white;
+  color: black;
 }
 
 a {
@@ -103,14 +129,16 @@ a {
   border: solid 2px #5ec4ff;
   padding: 20px;
   width: 50rem;
-  height: 7rem;
+  margin:auto;
   text-align: center;
+  background-color: #676767;
+  color: #5ec4ff;
 }
 
 .intro_p {
-  padding-bottom : 8rem;
+  /*padding-bottom : 8rem;
   /* height: 40rem; */
-  height: calc(100% - 15px - 7rem + 5rem);
+  height: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
