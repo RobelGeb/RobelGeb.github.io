@@ -82,11 +82,16 @@
         const app = document.getElementById('app');
 
         function Header(props) {
-            return(<h1> { props.title } </h1>);
+            return(<h1> { props.title ? props.title: 'Default Title' } </h1>);
         }
 
         function HomePage() {
-            return <div> <Header title="React <3"/> <Header title="JSX </3" /> </div>;
+            return (
+                <div> 
+                    <Header title="React <3" /> 
+                    <Header /> 
+                </div>
+            );
         }
         ReactDOM.render(<HomePage />, app);
 
