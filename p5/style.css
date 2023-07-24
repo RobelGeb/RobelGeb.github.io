@@ -170,16 +170,15 @@ textarea {
   min-width: 700px;
   min-height: 600px;
 }
-
-div.row {
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
-  align-content: center;
-  padding-bottom: 4rem;
+  align-items: center;
+  padding: 0 10% 4rem 10%;
 }
 
-div.footer {
+.footer {
   text-align: center;
 }
