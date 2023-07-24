@@ -71,7 +71,28 @@
                 <img src="https://cdn.worldvectorlogo.com/logos/git.svg" height="100px" width="250px" alt="" />
             </div>
     </div>
-    <div class="footer">a website by Robel Gebremichael</div>
+
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function Header(props) {
+            return(<h1> { props.title } </h1>);
+        }
+
+        function HomePage() {
+            return <div> <Header title="React <3"/> <Header title="JSX </3" /> </div>;
+        }
+        ReactDOM.render(<HomePage />, app);
+
+    </script>
+
+    <div class="footer">a website by Robel Gebremichael ∞</div>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
