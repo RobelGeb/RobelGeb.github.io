@@ -79,6 +79,10 @@ h1 {
   padding-left: 0.5%;
 }
 
+img.proj1img {
+  border-radius: 10px;
+  border: #676767;
+}
 
 
 .proj2 {
@@ -143,8 +147,6 @@ a {
   width: 50rem;
   margin:auto;
   text-align: center;
-
-
 }
 
 .intro_p {
@@ -189,7 +191,8 @@ textarea {
   flex-direction: row;
   align-items: center;
   padding: 0 10% 8rem 10%;
-  width: 80%
+  width: 80%;
+  resize: both;
 }
 
 .footer {
