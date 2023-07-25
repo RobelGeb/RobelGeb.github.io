@@ -122,6 +122,16 @@ a {
   text-decoration: none;
 }
 
+.project-title {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+h1.project-title {
+  padding-right: 2rem;
+}
+
 .projectsA {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
@@ -141,9 +151,11 @@ a {
 }
 
 .landing {
-  background-color: #676767;
+  /* background-color: #676767; */
+  background-image: url('seattle_skyline.svg');
   color: #5ec4ff;
   width: 100%;
+  background-size: 100% 100%;
 }
 
 .description {
