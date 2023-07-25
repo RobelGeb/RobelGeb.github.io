@@ -61,7 +61,6 @@ h1 {
 
 .proj1, .proj2 {
   display: flex;
-  align-items: flex-end;
   justify-content: end;
   height: 20rem;
   background-color: #ccc;
@@ -70,18 +69,27 @@ h1 {
   margin-top: 6rem;
 }
 
+.proj1title, .proj2title {
+  font-size: 24pt;
+  display: flex;
+  align-items: flex-start;
+}
+
 .proj1:hover, .proj2:hover {
   background-color: #a1a1a1;
 }
 
 .proj1 {
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-left: 0.5%;
+
 }
 
 img.proj1img {
   border-radius: 10px;
   border: #676767;
+  display: flex;
+
 }
 
 
@@ -198,3 +206,7 @@ textarea {
 .footer {
   text-align: center;
 }
+
+/* .slide:hover {
+
+} */
