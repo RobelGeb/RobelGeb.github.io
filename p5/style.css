@@ -219,6 +219,17 @@ textarea {
   text-align: center;
 }
 
+div.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+h1.contact {
+  height: auto;
+}
+
 /* .slide:hover {
 
 } */
