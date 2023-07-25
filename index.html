@@ -1,5 +1,6 @@
 <!DOCTYPE html> 
 <html> 
+
     <head> 
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
@@ -11,7 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </head> 
+    </head>
+
     <body> 
         <div class="navbar">
             <ul>
@@ -20,21 +22,25 @@
                 <li><b>Home</b></li> 
             </ul>
         </div>
-        <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000"> Hello World, this is my portfolio!</h1>
-        <div class="intro_p" >
-            <div class="description" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
-                    My name is Robel Gebremichael<br> 
-                    I am a UW Engineering alum and a consulting anaylst at Accenture <br>
-                    Currently residing in Seattle, WA! &#9748;
-            </div>
+        <div class="landing">
+            <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000"> Hello World, this is my portfolio!</h1>
+            <div class="intro_p" >
+                <div class="description" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                        My name is Robel Gebremichael<br> 
+                        I am a UW Engineering alum and a consulting anaylst at Accenture <br>
+                        Currently residing in Seattle, WA! &#9748;
+                </div>
+            </div>    
         </div>
-
+        
         <div class="projects">
             <div class="project-title">
                 <h1>Physical Computing Projects!</h1>
             </div>
             <div>
-                <h2 class="proj1" data-aos="fade-right">Project 1</h2>
+                <a href="https://github.com/RobelGeb/cryptopricer" target="_blank">
+                    <h2 class="proj1" data-aos="fade-right">CryptoPricer</h2>
+                </a>
                 <h2 class="proj2" data-aos="fade-left">Project 2</h2>
                 <h2 class="proj1" data-aos="fade-right">Project 3</h2>
                 <h2 class="proj2" data-aos="fade-left">Project 4</h2>
@@ -51,24 +57,34 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
+                    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" height="100"  width="250" alt="" />
+                </div>
+                <div class="slide">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" height="100" width="250" alt="" />
+                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://cdn.worldvectorlogo.com/logos/java.svg" height="100px" width="250px" alt="" />
+                    <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" height="100" width="250" alt="" />
                 </div>
-        </div><div class="row">
+        </div>
+        <div class="row">
             <div class="slide">
-                <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" height="100" width="250px" alt="" />
+                <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" height="100" width="250" alt="" />
             </div>
 
             <div class="slide">
-                <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" height="100" width="250" alt="" />
+                <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" height="100" width="250" alt="" />
             </div>
             <div class="slide">
-                <img src="https://cdn.worldvectorlogo.com/logos/git.svg" height="100px" width="250px" alt="" />
+                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" height="100" width="250" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="100" width="250" alt="" />
             </div>
     </div>
 
@@ -86,10 +102,18 @@
         }
 
         function HomePage() {
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
             return (
                 <div> 
                     <Header title="React <3" /> 
                     <Header /> 
+                    <ul>
+                        {names.map((name) => (
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
+                    <button onClick={}>Like</button>
                 </div>
             );
         }
@@ -99,8 +123,7 @@
 
     <div class="footer">a website by Robel Gebremichael ∞</div>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+        <script> AOS.init(); </script>
     </body>
+
 </html>
