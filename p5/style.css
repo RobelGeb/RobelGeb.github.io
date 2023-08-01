@@ -151,9 +151,8 @@ h1.project-title {
 }
 
 .landing {
-  /* background-color: #676767; */
   background-image: url("seattle_skyline.svg");
-  color: #5ec4ff;
+  color: black;
   width: 100%;
   background-size: 100% 100%;
 }
@@ -181,16 +180,6 @@ h1.project-title {
 p {
   padding-top: 4rem;
   font-size: 12pt;
-  animation-name: bounce;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;  
-  animation-delay: 2s;
-}
-
-@keyframes bounce {
-  0%{top:0px;} 
-  50%{top:100px;} 
-  100%{top:0px;}
 }
 
 p.code {
@@ -230,6 +219,37 @@ h1.contact {
   height: auto;
 }
 
-/* .slide:hover {
+div.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
 
-} */
+.hide {
+  display: none;
+}
+
+img.slide:hover + .hide {
+  display: flex;
+}
+
+img.slide-dark:hover + .hide {
+  display: flex;
+}
+
+img.slide {
+  filter: grayscale(75%);
+  filter: brightness(50%);
+}
+
+img.slide-dark {
+  filter: opacity(0.5);
+}
+
+img.slide-dark:hover {
+  filter: opacity(1);
+}
+img.slide:hover {
+  filter: grayscale(0);
+}
