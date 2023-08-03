@@ -7,6 +7,10 @@
 
         <title>Robel's Portfolio</title> 
 
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -15,23 +19,26 @@
     </head>
     
     <body> 
-        <div class="navbar">
-            <ul>
-                <li><a href="portfolio.html">Projects</a></li>
-                <li class="second-child"><a href="about.html">About</a></li>
-                <li><b>Home</b></li> 
-            </ul>
+        <div class="lan-nav">
+            <div class="navbar">
+                <ul>
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li class="second-child"><a href="about.html">About</a></li>
+                    <li><b>Home</b></li> 
+                </ul>
+            </div>
+            <div class="landing">
+                <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000"> Hello World, this is my portfolio!</h1>
+                <div class="intro_p" >
+                    <div class="description" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                            My name is Robel Gebremichael<br> 
+                            I am a UW Engineering alum and a consulting anaylst at Accenture <br>
+                            Currently residing in Seattle, WA!
+                    </div>
+                </div>    
+            </div>
         </div>
-        <div class="landing">
-            <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000"> Hello World, this is my portfolio!</h1>
-            <div class="intro_p" >
-                <div class="description" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
-                        My name is Robel Gebremichael<br> 
-                        I am a UW Engineering alum and a consulting anaylst at Accenture <br>
-                        Currently residing in Seattle, WA!
-                </div>
-            </div>    
-        </div>
+        
         
         <div class="projects">
             <div class="project-title">
@@ -41,18 +48,20 @@
             <div>
                 <a href="https://github.com/RobelGeb/cryptopricer" target="_blank">
                 <div class="proj1" data-aos="fade-right">
+                    <div class="inside-proj">
                         <h2 class="proj1title">CryptoPricer</h2>
-                        <img class="proj1img" src="/img/cryptoscreenshot.png" height="325" width="600"/>
-                    
+                        <p class="inside-proj">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </div>
+                    <img class="proj1img" src="/img/cryptoscreenshot.png" height="325" width="600"/>
                 </div>
                 </a>
                 
-                <h2 class="proj2" data-aos="fade-left">
-                    Project 2
-                    
-                </h2>
-                <h2 class="proj1" data-aos="fade-right">Project 3</h2>
-                <h2 class="proj2" data-aos="fade-left">Project 4</h2>
+                <h2 class="proj2" data-aos="fade-left">Chatter</h2>
+                <h2 class="proj1" data-aos="fade-right">Lyric Finder</h2>
             </div>
             
         </div>       
@@ -112,50 +121,19 @@
             
     </div>
 
-    <div id="app"></div>
-
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/jsx">
-        const app = document.getElementById('app');
-
-        function Header(props) {
-            return(<h1> { props.title ? props.title: 'Default Title' } </h1>);
-        }
-
-        function HomePage() {
-            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-
-            return (
-                <div> 
-                    <Header title="React <3" /> 
-                    <Header /> 
-                    <ul>
-                        {names.map((name) => (
-                            <li key={name}>{name}</li>
-                        ))}
-                    </ul>
-                    <button onClick={}>Like</button>
-                </div>
-            );
-        }
-        ReactDOM.render(<HomePage />, app);
-
-    </script>
-
-    <h1 class="contact"> Contact Me </h1>
-    <div class="contact">
-        <a href="https://www.linkedin.com/in/robelgeb/">
-            <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" height="50" width="100" />
-        </a>
-        <a href="https://github.com/robelGeb/">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" height="50" width="100">
-        </a>
-        <a href="mailto:robelgebrem@gmail.com">
-            <img src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" height="50" width="100">
-        </a>
+    <div class="contact-section">
+        <h3 class="contact"> Contact Me </h3>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/robelgeb/">
+                <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" class="slide" height="50" width="100" />
+            </a>
+            <a href="https://github.com/robelGeb/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" class="slide-dark" height="50" width="100">
+            </a>
+            <a href="mailto:robelgebrem@gmail.com">
+                <img src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" class="slide" height="50" width="100">
+            </a>
+        </div>
     </div>
 
     <div class="footer">a website by Robel Gebremichael ∞</div>
