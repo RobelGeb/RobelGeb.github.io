@@ -94,7 +94,7 @@ img.proj1img {
 }
 
 img.proj1img:hover {
-  filter: opacity(10);
+  filter: blur(1px);
 }
 
 .proj2 {
