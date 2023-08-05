@@ -196,85 +196,46 @@ h1.project-title {
 }
 
 #hi {
-	animation: pulse 8s;
+	animation: pulse 7s;
   animation-iteration-count: infinite;
   font-size: 33pt;
 }
 
 @keyframes pulse {
   0% {
-    color: #676767;
-  }
-  32% {
     color: #ccc;
+  }
+  16% {
+    color: #676767;
   }
   33% {
-    color: #676767;
-  }
-  65% {
     color: #ccc;
+  }
+  50% {
+    color: #676767;
   }
   66% {
-    color: #676767;
-  }
-  99% {
     color: #ccc;
   }
-  100% {
+  83% {
     color: #676767;
   }
+  100% {
+    color: #ccc;
+  }
 }
-/* 
-0% {
-  color: #676767;
-}
-5% {
-  color: #676767;
-}
-15% {
-  color: white;
-}
-25% {
-  color: #676767;
-}
-30% {
-  color: #676767;
-}
-40% {
-  color: white;
-}
-50% {
-  color: #676767;
-}
-55% {
-  color: #676767;
-}
-65% {
-  color: white;
-}
-75% {
-  color: #676767;
-}
-80% {
-  color: #676767;
-}
-90% {
-  color: white;
-}
-100% {
-  color: #676767;
-} */
+
 #hi:after {
-	content: "";
-	animation: spin 8s linear;
+	content: "Designer";
+	animation: spin 7s linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes spin {
   0% { content:"Designer"; }
-  16% { content:"Developer"; }
-  49% { content: "Consulting Analyst"; }
-  83% { content:"Seattlite"; }
+  33% { content:"Developer"; }
+  66% { content: "Consulting Analyst"; }
+  100% { content:"Seattlite"; }
 }
 
 .intro_p {
