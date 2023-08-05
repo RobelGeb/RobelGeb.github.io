@@ -94,12 +94,13 @@ h1 {
 
 p.inside-proj {
   padding: 0 1rem 0 1rem;
-  font-size: 16pt;
+  font-size: 18pt;
+  line-height: 25pt;
 }
 
-.proj1:hover, .proj2:hover {
+/* .proj1:hover, .proj2:hover {
   background-color: #a1a1a1;
-}
+} */
 
 img.proj1img {
   border-radius: 10px;
@@ -109,7 +110,7 @@ img.proj1img {
 }
 
 img.proj1img:hover {
-  filter: opacity(4);
+  filter: opacity(0.5);
 }
 
 
@@ -188,8 +189,96 @@ h1.project-title {
   transform: translate(-50%, -50%);
 }
 
+#wrapper {
+  display: flex;
+  align-content: flex-start;
+	color: white;
+}
+
+#hi {
+	animation: pulse 8s;
+  animation-iteration-count: infinite;
+  font-size: 33pt;
+}
+
+@keyframes pulse {
+  0% {
+    color: #676767;
+  }
+  32% {
+    color: #ccc;
+  }
+  33% {
+    color: #676767;
+  }
+  65% {
+    color: #ccc;
+  }
+  66% {
+    color: #676767;
+  }
+  99% {
+    color: #ccc;
+  }
+  100% {
+    color: #676767;
+  }
+}
+/* 
+0% {
+  color: #676767;
+}
+5% {
+  color: #676767;
+}
+15% {
+  color: white;
+}
+25% {
+  color: #676767;
+}
+30% {
+  color: #676767;
+}
+40% {
+  color: white;
+}
+50% {
+  color: #676767;
+}
+55% {
+  color: #676767;
+}
+65% {
+  color: white;
+}
+75% {
+  color: #676767;
+}
+80% {
+  color: #676767;
+}
+90% {
+  color: white;
+}
+100% {
+  color: #676767;
+} */
+#hi:after {
+	content: "";
+	animation: spin 8s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% { content:"Designer"; }
+  16% { content:"Developer"; }
+  49% { content: "Consulting Analyst"; }
+  83% { content:"Seattlite"; }
+}
+
 .intro_p {
-  height: 20rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -275,3 +364,4 @@ img.slide-dark:hover {
 img.slide:hover {
   filter: grayscale(0);
 }
+
