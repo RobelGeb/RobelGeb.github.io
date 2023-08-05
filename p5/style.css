@@ -132,16 +132,28 @@ h3 {
   border: 15px;
 }
 
-.landing {
-  background-image: url("seattle_skyline.svg");
-  width: 100%;
-  background-size: 100% 100%;
-}
-
 .lan-nav {
   background-color: #676767;
   color: #e1e1e1;
   height: 100%
+}
+
+.landing {
+  padding-left: 2rem;
+}
+
+.greeting {
+  justify-content: flex-start;
+  font-size: 46pt;
+}
+
+.description {
+  letter-spacing: 0.1rem;
+  line-height: 1.75rem;
+  font-size: 15pt;
+  border: solid 2px #5ec4ff;
+  padding: 20px;
+  width: 50rem;
 }
 
 a {
@@ -176,28 +188,11 @@ h1.project-title {
   transform: translate(-50%, -50%);
 }
 
-.greeting {
-  margin: 0;
-}
-
-.description {
-  letter-spacing: 0.1rem;
-  line-height: 1.75rem;
-  font-size: 15pt;
-  border: solid 2px #5ec4ff;
-  padding: 20px;
-  width: 50rem;
-  margin: auto;
-  text-align: center;
-}
-
 .intro_p {
   height: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
-  padding-bottom: 10rem;
 }
 
 p {
