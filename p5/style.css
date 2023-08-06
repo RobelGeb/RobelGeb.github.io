@@ -192,7 +192,7 @@ h1.project-title {
 #wrapper {
   display: flex;
   align-content: flex-start;
-	color: white;
+	color: #ccc;
 }
 
 #hi {
@@ -235,7 +235,8 @@ h1.project-title {
   0% { content:"Designer"; }
   33% { content:"Developer"; }
   66% { content: "Consulting Analyst"; }
-  100% { content:"Seattlite"; }
+  99% { content:"Seattlite"; }
+  100% { content:"Designer"; }
 }
 
 .intro_p {
