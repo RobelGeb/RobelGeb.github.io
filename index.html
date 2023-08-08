@@ -27,14 +27,14 @@
                 </ul>
             </div>
             <div class="landing">
-                <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>
+                <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>                
                 <div class="intro_p" >
                     <div id="wrapper">
                         <p id="words"></p>
+                        <div class="button">
+                            <button class="button-6" id="dark-button" onclick="darkMode()">🌙</button>
+                        </div>
                     </div>
-                </div>
-                <div class="button">
-                    <button class="button-6" onclick="myFunction()">🌚</button>
                 </div>
             </div>
         </div>
@@ -165,9 +165,22 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script> AOS.init(); </script>
         <script>
-            function myFunction() {
+            function darkMode() {
+                
+                if ( document.querySelector('#dark-button').innerHTML === "🌙" ) {
+                    document.querySelector('#dark-button').innerHTML = "☀️"
+                    console.log("light");
+                } else {
+                    document.querySelector('#dark-button').innerHTML = "🌙"
+                    console.log("dark");
+                }
+
                 var element = document.body;
-                element.classList.toggle("dark-mode");
+                //var elementB = document.p;
+                element.classList.toggle("dark-mode-body");
+                //elementB.classList.toggle("dark-mode-p");
+                var el = document.getElementById("dark-button");
+                
             }
         </script>
     </body>
