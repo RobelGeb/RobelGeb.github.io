@@ -19,7 +19,6 @@ function Project({ title }) {
 function Projects() {
     return (
         <div>
-
             <Project title="CryptoPricer" />
             <Project title="Chatter" />
             <Project title="Lyric Finder" />

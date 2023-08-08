@@ -30,9 +30,12 @@
                 <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>
                 <div class="intro_p" >
                     <div id="wrapper">
-                        <p id="hi"></p>
+                        <p id="words"></p>
                     </div>
-                </div>    
+                </div>
+                <div class="button">
+                    <button class="button-6" onclick="myFunction()">🌚</button>
+                </div>
             </div>
         </div>
         
@@ -42,7 +45,7 @@
                 <h1 class="project-title">Development Projects</h1>
                 <img src="./img/monitorcode_lineart.svg" height="75" width="75"/>
             </div>
-            <div class="proj1" data-aos="fade-right">
+            <div class="proj1" style="width: 90%" data-aos="fade-right">
                 <div class="inside-proj">
                     <h2 class="proj1title">CryptoPricer</h2>
                     <p class="inside-proj">
@@ -86,7 +89,7 @@
 
         <div class="project-title" data-aos="fade-up">
             <h1 class="project-title" id="skills">Skills + Tools</h1>
-                <img src="./img/tools_lineart.svg" class="graphic" width="70"/>
+            <img src="./img/tools_lineart.svg" class="graphic" width="70"/>
         </div>
         <div data-aos="fade-up">
             <div class="row">
@@ -161,5 +164,11 @@
         <div class="footer">a website by Robel Gebremichael ∞</div>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script> AOS.init(); </script>
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
     </body>
 </html>

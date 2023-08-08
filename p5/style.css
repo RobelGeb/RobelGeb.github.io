@@ -5,12 +5,22 @@ html, body {
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    margin: 0 0 8px 0;
+    margin: 0;
     overflow-x: hidden;
+}
+
+.dark-mode, .hide, .inside-proj1 {
+  background-color: #676767;
+  color: #ccc;
 }
 
 canvas {
   display: block;
+}
+
+p {
+  padding-top: 4rem;
+  font-size: 12pt;
 }
 
 ul {
@@ -22,7 +32,7 @@ ul {
 li {
   float: right;
   font-size: 20px;
-  border-bottom: 2px solid #5ec4ff;
+  border-bottom: 2px solid #ccc;
   
 }
 
@@ -45,7 +55,7 @@ h1 {
 
 .projects {
   display: flex;
-  padding-top: 15rem;
+  padding-top: 10rem;
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
@@ -66,7 +76,7 @@ h1 {
 .proj1, .proj2 {
   display: flex;
   height: 20rem;
-  width: 80%;
+  width: 90%;
   background-color: #ccc;
   font-size: 24pt;
   padding-bottom: 0.5%;
@@ -114,8 +124,6 @@ img.proj1img:hover {
   filter: opacity(0.5);
 }
 
-
-
 h2 {
   text-decoration: underline;
   text-decoration-color: #5ec4ff;
@@ -125,7 +133,7 @@ h3 {
   float: left;
   font-size:x-large;
   margin-top: 15px;
-  border-bottom: 2px solid #5ec4ff;
+  border-bottom: 2px solid #ccc;
 }
 
 .navbar {
@@ -173,31 +181,29 @@ h1.project-title {
   padding-right: 2rem;
 }
 
-.projectsA {
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  top: 45%;
-  left: 53%;
-  
+.projects-sub {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 3rem;
 }
 
-.projectsB {
+.projectsA {
   display: grid;
-  grid-template-columns: 500px 500px 500px;
-  position: absolute;
-  top: 65%;
-  left: 58%;
-  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ccc;
+  color: black;
+  justify-content: center;
+  justify-items: center;
 }
 
 #wrapper {
   display: flex;
   align-content: flex-start;
-	color: #ccc;
 }
 
-#hi {
-	animation: pulse 7s;
+#words {
+	animation: pulse 10s;
   animation-iteration-count: infinite;
   font-size: 33pt;
 }
@@ -206,19 +212,25 @@ h1.project-title {
   0% {
     color: #ccc;
   }
-  16% {
+  12% {
     color: #425595;
   }
-  33% {
+  25% {
     color: #ccc;
+  }
+  37% {
+    color: #425595;
   }
   50% {
-    color: #425595;
-  }
-  66% {
     color: #ccc;
   }
-  83% {
+  62% {
+    color: #425595;
+  }
+  75% {
+    color: #ccc;
+  }
+  87% {
     color: #425595;
   }
   100% {
@@ -226,18 +238,18 @@ h1.project-title {
   }
 }
 
-#hi:after {
-	content: "Designer";
-	animation: spin 7s linear;
+#words:after {
+	content: "";
+	animation: spin 10s linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes spin {
   0% { content:"Designer"; }
-  33% { content:"Developer"; }
-  66% { content: "Consulting Analyst"; }
-  99% { content:"Seattlite"; }
-  100% { content:"Designer"; }
+  25% { content:"Developer"; }
+  50% { content: "Consulting Analyst"; }
+  75% { content:"Seattle Native"; }
+  100% { content: "Designer"; }
 }
 
 .intro_p {
@@ -247,16 +259,16 @@ h1.project-title {
   justify-content: space-evenly;
 }
 
-p {
-  padding-top: 4rem;
-  font-size: 12pt;
+div.button {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .button-6 {
   align-items: center;
-  background-color: #dcdcdc;
-  border: 1px solid #5ec4ff;
-  border-radius: .25rem;
+  background-color: #425595;
+  border: 0px solid #ccc;
+  border-radius: 0rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
   color: #5ec4ff;
@@ -280,15 +292,14 @@ p {
 }
 
 .button-6:hover {
-  border: 2px;
+  border: 2px; 
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: white;
-  background-color: #425595;
+  background-color: #dcdcdc;
 }
 
 .button-6:hover {
-  transform: translateY(-1px);
+  transform: translateY(2px);
 }
 
 /* .button-6:active {
@@ -298,10 +309,6 @@ p {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 } */
-
-
-
-
 
 form {
   padding-left: 1rem;
