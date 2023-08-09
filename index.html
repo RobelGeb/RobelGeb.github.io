@@ -30,7 +30,7 @@
                 <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>                
                 <div class="intro_p" >
                     <div id="wrapper">
-                        <p id="words"></p>
+                        <p id="words" data-aos="fade-up" data-aos-duration="1000"></p>
                         <div class="button">
                             <button class="button-6" id="dark-button" onclick="darkMode()">🌙</button>
                         </div>
@@ -117,34 +117,34 @@
                     <img src="./img/logos/flask.svg" class="slide-dark" height="100" width="250" alt="" />
                     <div class="hide">Flask</div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="slide">
+                    <img src="./img/logos/python-icon.svg" class="slide" height="100" width="250" alt="" />
+                    <div class="hide">Python</div>
+                </div>
+                <div class="slide">
+                    <img src="./img/logos/java-icon.svg" class="slide" height="100" width="250" alt="" />
+                    <div class="hide">Java</div>
+                </div>
+                <div class="slide">
+                    <img src="./img/logos/git-scm-icon.svg" class="slide" height="100" width="250" alt="" />
+                    <div class="hide">Git</div>
+                </div>
+                <div class="slide">
+                    <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="slide-dark" height="100" width="250" alt="" />
+                    <div class="hide">GitHub</div>
+                </div>
+                <div class="slide">
+                    <img src="./img/logos/firebase-icon.svg" class="slide" height="100" width="250" alt="" />
+                    <div class="hide">Firebase</div>
+                </div>
+                <div class="slide">
+                    <img src="./img/logos/figma.svg" class="slide" height="100" width="250" alt="" />
+                    <div class="hide">Figma</div>
+                </div>
+            </div>    
         </div>
-        <div class="row">
-            <div class="slide">
-                <img src="./img/logos/python-icon.svg" class="slide" height="100" width="250" alt="" />
-                <div class="hide">Python</div>
-            </div>
-            <div class="slide">
-                <img src="./img/logos/java-icon.svg" class="slide" height="100" width="250" alt="" />
-                <div class="hide">Java</div>
-            </div>
-            <div class="slide">
-                <img src="./img/logos/git-scm-icon.svg" class="slide" height="100" width="250" alt="" />
-                <div class="hide">Git</div>
-            </div>
-            <div class="slide">
-                <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="slide-dark" height="100" width="250" alt="" />
-                <div class="hide">GitHub</div>
-            </div>
-            <div class="slide">
-                <img src="./img/logos/firebase-icon.svg" class="slide" height="100" width="250" alt="" />
-                <div class="hide">Firebase</div>
-            </div>
-            <div class="slide">
-                <img src="./img/logos/figma.svg" class="slide" height="100" width="250" alt="" />
-                <div class="hide">Figma</div>
-            </div>
-        </div>    
-    </div>
 
         <div class="contact-section">
             <h3 class="contact"> Contact Me </h3>
@@ -166,21 +166,18 @@
         <script> AOS.init(); </script>
         <script>
             function darkMode() {
-                
                 if ( document.querySelector('#dark-button').innerHTML === "🌙" ) {
-                    document.querySelector('#dark-button').innerHTML = "☀️"
+                    document.querySelector('#dark-button').innerHTML = "☀️";
                     console.log("light");
                 } else {
-                    document.querySelector('#dark-button').innerHTML = "🌙"
+                    document.querySelector('#dark-button').innerHTML = "🌙";
                     console.log("dark");
                 }
 
-                var element = document.body;
-                //var elementB = document.p;
-                element.classList.toggle("dark-mode-body");
-                //elementB.classList.toggle("dark-mode-p");
-                var el = document.getElementById("dark-button");
-                
+                var bodyText = document.body;
+                var cardText = document.getElementsByClassName("inside-proj");
+                bodyText.classList.toggle("dark-mode-body");
+                cardText.classList.toggle("dark-mode-card");
             }
         </script>
     </body>
