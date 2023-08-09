@@ -85,6 +85,20 @@
                 </div>
                 <img class="proj1img" src="./img/auddlogo.png"/>
             </div>
+            <div class="proj2" data-aos="fade-left">
+                <div class="inside-proj" id="card">
+                    <h2 class="proj2title">Arduino</h2>
+                    <p class="inside-proj">
+                        Click the button below to see some of my short projects I completed using my Arduino kit!
+                    </p>
+                    <form action="portfolio.html" target="_blank">
+                        <button class="button-6" role="button" type="submit" style="width: 7rem">Projects</button>
+                    </form>                
+                </div>
+                <img class="proj1img" src="/img/Arduino_Logo.svg" height="325" width="600"> 
+                    <img src="./img/logos/next-js.svg" class="hide" height="100" width="250" alt="" />
+                </img>
+            </div>
         </div>       
 
         <div class="project-title" data-aos="fade-up">
@@ -168,16 +182,16 @@
             function darkMode() {
                 if ( document.querySelector('#dark-button').innerHTML === "🌙" ) {
                     document.querySelector('#dark-button').innerHTML = "☀️";
-                    console.log("light");
                 } else {
                     document.querySelector('#dark-button').innerHTML = "🌙";
-                    console.log("dark");
                 }
 
                 var bodyText = document.body;
                 var cardText = document.getElementsByClassName("inside-proj");
+                var buttonText = document.getElementsByClassName("button-6");
                 bodyText.classList.toggle("dark-mode-body");
                 cardText.classList.toggle("dark-mode-card");
+                buttonText.classList.toggle("dark-mode-button-6");
             }
         </script>
     </body>

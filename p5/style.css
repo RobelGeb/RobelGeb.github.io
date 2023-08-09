@@ -129,8 +129,9 @@ img.proj1img {
   height: 20.5rem;
 }
 
-img.proj1img:hover {
+img.proj1img:hover + .hide{
   filter: opacity(0.5);
+  display: absolute;
 }
 
 h2 {
@@ -152,7 +153,7 @@ h3 {
 }
 
 .lan-nav {
-  background-color: #75634696;
+  background-color: #756346b0;
   color: #ccc;
   height: 100%
 }
@@ -195,6 +196,7 @@ h1.project-title {
   justify-content: center;
   padding-top: 0;
   padding-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .projectsA {
@@ -204,6 +206,7 @@ h1.project-title {
   color: black;
   justify-content: center;
   justify-items: center;
+  padding: 4rem 0;
 }
 
 #wrapper {
@@ -285,6 +288,11 @@ div.button {
   box-shadow: none;
 }
 
+.dark-mode-button-6 {
+  color: #ccc;
+  background-color: black;
+}
+
 .button-6 {
   align-items: center;
   background-color: transparent;
@@ -317,11 +325,10 @@ div.button {
   background-color: #75634696;
   border-radius: 5px;
   color: white;
+  transform: translateY(-4px);
+
 }
 
-.button-6:hover {
-  transform: translateY(-5px);
-}
 
 /* .button-6:active {
   background-color: #F0F0F1;
