@@ -202,7 +202,6 @@ h1.project-title {
 .projectsA {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #ccc;
   color: black;
   justify-content: center;
   justify-items: center;
@@ -388,6 +387,10 @@ div.contact {
   align-items: center;
   justify-content: center;
   padding-bottom: 2rem;
+}
+
+h3.contact {
+
 }
 
 div.slide {
