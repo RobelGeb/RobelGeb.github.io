@@ -40,18 +40,27 @@ ul {
 li {
   float: right;
   font-size: 25px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #606060;
   padding: 10px;
-  color: #484848da
+  color: #454545;
 }
 
 li:hover {
-  background-color: #676767;
+  background-color: #9f9f9f;
 }
 
 li.second-child {
   margin-left: 15px;
   width: 3.9rem;
+}
+
+.dark-mode-lan-nav {
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.dark-mode-lan-nav:hover {
+  background-color: #454545;
 }
 
 h1 {
@@ -63,7 +72,7 @@ h1 {
 
 .projects {
   display: flex;
-  padding-top: 10rem;
+  padding-top: 3rem;
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
@@ -153,10 +162,6 @@ h3 {
   padding-top: 10px
 }
 
-.dark-modelan-nav {
-  color: #ccc;
-}
-
 .navbar {
   border-style: solid;
   border-color: #578080;
@@ -208,6 +213,12 @@ img.about-me {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+hr {
+  border-top: 3px solid #bbb;
+  width: 90%;
+  margin-top: 5rem;
 }
 
 .project-title {
@@ -316,10 +327,7 @@ div.button {
   box-shadow: none;
 }
 
-.dark-mode-button-6 {
-  color: #ccc;
-  background-color: black;
-}
+
 
 .button-6 {
   align-items: center;
@@ -344,6 +352,10 @@ div.button {
   touch-action: manipulation;
   vertical-align: baseline;
   width: 6rem;
+}
+
+.dark-mode-button-6 {
+  color: white;
 }
 
 .button-6:hover {
