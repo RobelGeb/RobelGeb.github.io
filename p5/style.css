@@ -337,6 +337,7 @@ div.button {
   color: rgb(47, 47, 47);
   cursor: pointer;
   display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 600;
   justify-content: center;
@@ -465,5 +466,6 @@ img.slide-dark:hover {
 
 img.slide:hover {
   filter: grayscale(0);
+  filter: brightness(1);
 }
 
