@@ -72,7 +72,7 @@ h1 {
 
 .projects {
   display: flex;
-  padding-top: 3rem;
+  padding-top: 2rem;
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
@@ -216,7 +216,7 @@ a {
 }
 
 hr {
-  border-top: 3px solid #bbb;
+  border-top: 2.5px solid #bbb;
   width: 90%;
   margin-top: 5rem;
 }
