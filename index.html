@@ -17,11 +17,13 @@
     </head>
     
     <body> 
-        <div class="lan-nav">
+        <div class="lan-nav" id="home">
             <div class="navbar">
                 <ul>
-                    <li><a href="portfolio.html">Projects</a></li>
-                    <li><b>Home</b></li> 
+                    <li><a href="#contact">Contact </a></li>
+                    <li><a href="#skills">Skills </a></li>
+                    <li><a href="#projects">Projects </a></li>
+                    <li><a href="#home"><b>Home </b></a></li> 
                 </ul>
             </div>
             <div class="landing">
@@ -38,7 +40,7 @@
         </div>
         
         
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="project-title">
                 <h1 class="project-title">Development Projects</h1>
                 <img src="./img/monitorcode_lineart.svg" height="75" width="75"/>
@@ -158,7 +160,7 @@
             </div>    
         </div>
 
-        <div class="contact-section">
+        <div class="contact-section" id="contact">
             <h3 class="contact"> Contact Me </h3>
             <div class="contact">
                 <a href="https://www.linkedin.com/in/robelgeb/" target="_blank">
@@ -186,10 +188,13 @@
 
                 var bodyText = document.body;
                 var cardText = document.getElementsByClassName("inside-proj");
-                var buttonText = document.getElementsByClassName("button-6");
+                var buttonText = document.getElementsByClassName("button-6")[0];
+                var navbarText = document.getElementsByClassName("lan-nav")[0];
+                console.log(navbarText);
                 bodyText.classList.toggle("dark-mode-body");
                 cardText.classList.toggle("dark-mode-card");
                 buttonText.classList.toggle("dark-mode-button-6");
+                navbarText.classList.toggle("dark-mode-lan-nav");
             }
         </script>
     </body>
