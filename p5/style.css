@@ -187,6 +187,24 @@ h3 {
   width: 50rem;
 }
 
+.about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8rem;
+}
+
+img.about-me {
+  justify-content: flex-end;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: row;
+  font-size: 20pt;
+}
+
 a {
   color: inherit;
   text-decoration: none;
