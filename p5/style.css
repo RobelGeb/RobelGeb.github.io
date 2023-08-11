@@ -156,6 +156,8 @@ h3 {
 
 .lan-nav {
   background-color: #756346b0;
+  /* background: rgb(36,36,36);
+  background: linear-gradient(90deg, rgba(36,36,36,0.9953703703703703) 0%, rgba(117,99,64,1) 72%); */
   color: #ccc;
   display: flex;
   flex-direction: column;
