@@ -589,4 +589,24 @@ img.contact:hover {
     height: auto;
   }
 
+  img.slide, img.slide-dark {
+    height: 66px;
+    width: 115px;
+  }
+
+  .row {
+    padding-bottom: 1rem;
+  }
+
+  .skills-companies {
+    flex-direction: column;
+  }
+
+  hr.skills {
+    display: none;
+  }
+
+  .about-desc {
+    flex-direction: column-reverse;
+  }
 }
