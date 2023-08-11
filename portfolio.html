@@ -1,54 +1,71 @@
 ﻿<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-    <title>Robel's Portfolio</title>
+        <title>Robel's Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css" />
 
-</head> 
-<body style="background-color: #ccc;">
-    <div class="lan-nav" style="height: auto">
-        <div class="navbar">
-            <ul>
-                <li><b>Projects</b></li>
-                <li><a href="index.html">Home</a></li> 
-            </ul>
+    </head> 
+    <body style="background-color: #ccc;">
+        <div class="lan-nav" style="height: auto">
+            <div class="navbar2">
+                <div class="menu-items">
+                    <div class="navbar-li"><a href="index.html"><b>Home</b></a></div> 
+                </div>
+                <div class="menu">
+                    <button id="burgir-button" onclick="showMenu()"><img src="./img/burgir.svg" class="menu"/></button>
+                </div>
+            </div>
+            
+                <h1>Physical Computing Projects!</h1>
+                <p class="projects-sub">The links below document my experiences learning about physical computing with Arduino</p>
         </div>
         
-            <h1>Physical Computing Projects!</h1>
-            <p class="projects-sub">The links below document my experiences learning about physical computing with Arduino</p>
-    </div>
-    
-    <div class="projectsA">
-        <div class="lesson">
-            <a href="assignment1.html"><h2>Blink</h2></a>
+        <div class="projectsA">
+            <div class="lesson">
+                <a href="assignment1.html"><h2>Blink</h2></a>
+            </div>
+            <div class="lesson">
+                <a href="assignment2.html"><h2>Fade</h2></a>
+            </div>
+            <div class="lesson">
+                <a href="assignment3.html"><h2>I/O</h2></a>
+            </div>
         </div>
-        <div class="lesson">
-            <a href="assignment2.html"><h2>Fade</h2></a>
+        <div class="projectsA">
+            <div class="lesson">
+                <a href="assignment4.html"><h2>Libraries</h2></a>
+            </div>
+            <div class="lesson">
+                <a href="assignment5.html"><h2>Voltage+Transistors</h2></a>
+            </div>
+            <div class="lesson">
+                <a href="final.html"><h2>Music Box</h2></a>
+            </div>
         </div>
-        <div class="lesson">
-            <a href="assignment3.html"><h2>I/O</h2></a>
-        </div>
-    </div>
-    <div class="projectsA">
-        <div class="lesson">
-            <a href="assignment4.html"><h2>Libraries</h2></a>
-        </div>
-        <div class="lesson">
-            <a href="assignment5.html"><h2>Voltage+Transistors</h2></a>
-        </div>
-        <div class="lesson">
-            <a href="final.html"><h2>Music Box</h2></a>
-        </div>
-    </div>
-</body>
+
+        <script>
+            function showMenu() {
+                var items = document.getElementsByClassName("navbar-li");
+                var menuItems = document.getElementsByClassName("menu-items")[0];
+                var menu = document.getElementsByClassName("navbar2")[0];
+
+                menuItems.classList.toggle("menu-items-show");
+                menu.classList.toggle("navbar2-show");
+                
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.toggle("navbar-li-show");
+                }
+            }
+        </script>
+    </body>
 </html>

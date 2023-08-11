@@ -18,14 +18,17 @@
     
     <body> 
         <div class="lan-nav" id="home">
-            <div class="navbar">
-                <ul>
-                    <li class="navbar-li"><a href="#contact">Contact</a></li>
-                    <li class="navbar-li"><a href="#skills">Skills</a></li>
-                    <li class="navbar-li"><a href="#projects">Projects</a></li>
-                    <li class="navbar-li"><a href="#about">About</a></li>
-                    <li class="navbar-li"><a href="#home"><b>Home</b></a></li> 
-                </ul>
+            <div class="navbar2">
+                <div class="menu-items">
+                    <div class="navbar-li"><a href="#contact">Contact</a></div>
+                    <div class="navbar-li"><a href="#skills">Skills</a></div>
+                    <div class="navbar-li"><a href="#projects">Projects</a></div>
+                    <div class="navbar-li"><a href="#about">About</a></div>
+                    <div class="navbar-li"><a href="#home"><b>Home</b></a></div> 
+                </div>
+                <div class="menu">
+                    <button id="burgir-button" onclick="showMenu()"><img src="./img/burgir.svg" class="menu"/></button>
+                </div>
             </div>
             <div class="landing">
                 <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>                
@@ -244,6 +247,19 @@
                 }
                 for (let i = 0; i < navbarText.length; i++) {
                     navbarText[i].classList.toggle("dark-mode-lan-nav");
+                }
+            }
+
+            function showMenu() {
+                var items = document.getElementsByClassName("navbar-li");
+                var menuItems = document.getElementsByClassName("menu-items")[0];
+                var menu = document.getElementsByClassName("navbar2")[0];
+
+                menuItems.classList.toggle("menu-items-show");
+                menu.classList.toggle("navbar2-show");
+                
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.toggle("navbar-li-show");
                 }
             }
         </script>
