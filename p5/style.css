@@ -210,7 +210,7 @@ h3 {
 .about-me {
   display: flex;
   flex-direction: column;
-  padding: 0 8rem;
+  padding: 0 8%;
 }
 
 img.about-me {
@@ -460,7 +460,8 @@ div.slide {
   flex-direction: column;
   align-items: center;
   color: black;
-  height: 120px;
+  height: 100px;
+  padding-bottom: 2rem;
 }
 
 .hide {
@@ -608,5 +609,17 @@ img.contact:hover {
 
   .about-desc {
     flex-direction: column-reverse;
+  }
+
+  .greeting {
+    font-size: 3rem;
+  }
+
+  img.about-me {
+    margin: 0;
+  }
+
+  #words {
+    font-size: 22pt;
   }
 }
