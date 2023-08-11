@@ -208,6 +208,9 @@ img.about-me {
   display: flex;
   flex-direction: row;
   font-size: 20pt;
+  align-items: center;
+  padding: 0;
+  line-height: 40px
 }
 
 a {
@@ -216,9 +219,15 @@ a {
 }
 
 hr {
-  border-top: 2.5px solid #bbb;
+  border-top: 1px solid #bbb;
   width: 90%;
   margin-top: 5rem;
+}
+
+.vert {
+  margin: 50px;
+  width: 0.1px;
+  border-left: 1px solid #bbb;
 }
 
 .project-title {
@@ -451,6 +460,11 @@ img.slide-dark:hover + .hide {
   display: flex;
 }
 
+img.slide, img.slide-dark {
+  height: 100px;
+  width: 175px;
+}
+
 img.slide {
   filter: grayscale(75%);
   filter: brightness(75%);
@@ -469,3 +483,50 @@ img.slide:hover {
   filter: brightness(1);
 }
 
+.skills-companies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 4rem;
+}
+
+.skills {
+  width: auto;
+}
+
+#msft {
+  padding-bottom: 2rem;
+  filter: brightness(0.8);
+}
+
+#companies {
+  margin: 0;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.companies-imgages {
+  display: flex;
+  align-items: center;
+}
+
+img.companies {
+  display: flex;
+  height: 100px;
+  width: 200px;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+img.contact {
+  height: 50px;
+  width: 100px;
+}
+
+img.contact:hover {
+  transform: translateY(-5px);
+}

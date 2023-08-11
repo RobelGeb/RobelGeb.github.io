@@ -44,7 +44,7 @@
        
        
        
-        <!-- TODO: set cards to a fixed height, add a "read more" button, add description for my about me section, and make sure my website is readable on mobile -->
+        <!-- TODO: set cards to a fixed width, add a "read more" button, add description for my about me section, and make sure my website is readable on mobile -->
         
         
         
@@ -54,16 +54,17 @@
         
         
         <div id="about" class="about-me">
-            <div class="project-title">
-                <h1 class="project-title">About Me!</h1>
+            <div class="project-title" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="project-title" >About Me!</h1>
                 <img src="./img/profile_lineart.svg" height="100" width="100"/>
             </div>
             <div class="about-desc">
-                <p class="about-desc">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                <p class="about-desc" data-aos="fade-right" data-aos-duration="1000">
+                    My name is Robel and I am a developer and UX/UI designer based in Seattle, WA. I recently graduated from the University of Washington
+                    with a degree in Human Centered Design and Engineering, and I created this website to showcase some of my previous works. <br /> <br /> 
+                    Outisde of programming and design I enjoy creating and listening to new music and playing soccer.
                 </p>
-                <img src="./img/self.jpg" class="about-me" height="300"/>
+                <img src="./img/self.jpg" class="about-me" height="300" data-aos="fade-left" data-aos-duration="1000"/>
             </div>
         </div>
         
@@ -132,76 +133,92 @@
 
         <hr>
 
-        <div class="project-title" data-aos="fade-up">
-            <h1 class="project-title" id="skills">Skills + Tools</h1>
-            <img src="./img/tools_lineart.svg" class="graphic" width="70"/>
-        </div>
-        <div data-aos="fade-up">
-            <div class="row">
-                <div class="slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="slide" height="100" width="250" alt="" />                    
-                    <div class="hide">React</div>
+        <div class="skills-companies">
+            <div class="skills">
+                <div class="project-title" data-aos="fade-up">
+                    <h1 class="project-title" id="skills">Skills + Tools</h1>
+                    <img src="./img/tools_lineart.svg" class="graphic" width="70"/>
                 </div>
-                <div class="slide">
-                    <img src="./img/logos/next-js.svg" class="slide-dark" height="100" width="250" alt="" />
-                    <div class="hide">Next.js</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/css-3.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">CSS3</div>
-                </div> 
-                <div class="slide">
-                    <img src="./img/logos/html-5.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">HTML5</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/logo-javascript.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">JavaScript</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/flask.svg" class="slide-dark" height="100" width="250" alt="" />
-                    <div class="hide">Flask</div>
+                <div data-aos="fade-up">
+                    <div class="row">
+                        <div class="slide">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="slide" alt="" />                    
+                            <div class="hide">React</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/next-js.svg" class="slide-dark" alt="" />
+                            <div class="hide">Next.js</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/css-3.svg" class="slide" alt="" />
+                            <div class="hide">CSS3</div>
+                        </div> 
+                        <div class="slide">
+                            <img src="./img/logos/html-5.svg" class="slide" alt="" />
+                            <div class="hide">HTML5</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/logo-javascript.svg" class="slide" alt="" />
+                            <div class="hide">JavaScript</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/flask.svg" class="slide-dark" alt="" />
+                            <div class="hide">Flask</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="slide">
+                            <img src="./img/logos/python-icon.svg" class="slide" " alt="" />
+                            <div class="hide">Python</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/java-icon.svg" class="slide" alt="" />
+                            <div class="hide">Java</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/git-scm-icon.svg" class="slide" alt="" />
+                            <div class="hide">Git</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="slide-dark" alt="" />
+                            <div class="hide">GitHub</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/firebase-icon.svg" class="slide" alt="" />
+                            <div class="hide">Firebase</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/logos/figma.svg" class="slide" alt="" />
+                            <div class="hide">Figma</div>
+                        </div>
+                    </div>    
                 </div>
             </div>
-            <div class="row">
-                <div class="slide">
-                    <img src="./img/logos/python-icon.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">Python</div>
+            <hr class="vert" />
+            <div class="companies">
+                <div class="project-title" data-aos="fade-up" >
+                    <h1 class="project-title" id="companies">Companies I've Worked With</h1>
                 </div>
-                <div class="slide">
-                    <img src="./img/logos/java-icon.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">Java</div>
+                <div class="companies-images" data-aos="fade-up">
+                    <img src="./img/logos/microsoft.svg" class="companies" id="msft"/>
+                    <img src="./img/logos/uw.svg" class="companies"/>
+                    <img src="./img/logos/salesforce.svg" class="companies"/>
                 </div>
-                <div class="slide">
-                    <img src="./img/logos/git-scm-icon.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">Git</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="slide-dark" height="100" width="250" alt="" />
-                    <div class="hide">GitHub</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/firebase-icon.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">Firebase</div>
-                </div>
-                <div class="slide">
-                    <img src="./img/logos/figma.svg" class="slide" height="100" width="250" alt="" />
-                    <div class="hide">Figma</div>
-                </div>
-            </div>    
+            </div>
         </div>
+        
 
         <div class="contact-section" id="contact">
             <h3 class="contact"> Contact Me </h3>
             <div class="contact">
                 <a href="https://www.linkedin.com/in/robelgeb/" target="_blank">
-                    <img src="./img/logos/linkedin-icon.svg" class="slide" height="50" width="100" />
+                    <img src="./img/logos/linkedin-icon.svg" class="contact"  />
                 </a>
                 <a href="https://github.com/robelGeb/" target="_blank">
-                    <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="slide-dark" height="50" width="100">
+                    <img src="./img/logos/GitHub_Invertocat_Logo.svg" class="contact">
                 </a>
                 <a href="mailto:robelgebrem@gmail.com" target="_blank">
-                    <img src="./img/logos/gmail-icon.svg" class="slide" height="50" width="100">
+                    <img src="./img/logos/gmail-icon.svg" class="contact">
                 </a>
             </div>
         </div>
