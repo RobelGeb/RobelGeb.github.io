@@ -434,7 +434,7 @@ textarea {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding: 0 10% 8rem 10%;
+  padding: 0 10% 4rem 10%;
   width: 80%;
   resize: both;
 }
@@ -533,8 +533,8 @@ img.slide:hover {
 
 img.companies {
   display: flex;
-  height: 200px;
-  width: 400px;
+  height: 150px;
+  width: 300px;
   justify-content: center;
   padding-bottom: 4rem;
 }
