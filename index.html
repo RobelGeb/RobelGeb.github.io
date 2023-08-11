@@ -27,7 +27,9 @@
                     <div class="navbar-li"><a href="#home"><b>Home</b></a></div> 
                 </div>
                 <div class="menu">
-                    <button id="burgir-button" onclick="showMenu()"><img src="./img/burgir.svg" class="menu"/></button>
+                    <button id="burgir-button" onclick="showMenu()">
+                        <img src="./img/burgir.svg" class="menu"/>
+                    </button>
                 </div>
             </div>
             <div class="landing">
@@ -205,8 +207,8 @@
                 </div>
                 <div class="companies-images" data-aos="fade-up">
                     <img src="./img/logos/microsoft.svg" class="companies" id="msft"/>
-                    <img src="./img/logos/uw.svg" class="companies"/>
                     <img src="./img/logos/salesforce.svg" class="companies"/>
+                    <img src="./img/logos/uw.svg" class="companies"/>
                 </div>
             </div>
         </div>
@@ -255,10 +257,12 @@
                 var items = document.getElementsByClassName("navbar-li");
                 var menuItems = document.getElementsByClassName("menu-items")[0];
                 var menu = document.getElementsByClassName("navbar2")[0];
+                var burger = document.getElementsByClassName("menu")[0];
 
                 menuItems.classList.toggle("menu-items-show");
                 menu.classList.toggle("navbar2-show");
-                
+                burger.classList.toggle("menu-show");
+
                 for (let i = 0; i < items.length; i++) {
                     items[i].classList.toggle("navbar-li-show");
                 }

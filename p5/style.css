@@ -533,8 +533,8 @@ img.slide:hover {
 
 img.companies {
   display: flex;
-  height: 100px;
-  width: 200px;
+  height: 200px;
+  width: 400px;
   justify-content: center;
   padding-bottom: 4rem;
 }
@@ -585,6 +585,10 @@ img.contact:hover {
     height: 35px;
   }
 
+  .menu-show {
+    rotate: 90deg;
+  }
+
   .menu-items-show {
     flex-direction: column-reverse;
   }
@@ -609,16 +613,12 @@ img.contact:hover {
     flex-direction: column;
   }
 
-  hr.skills {
-    display: none;
-  }
-
   .about-desc {
     flex-direction: column-reverse;
   }
 
   .greeting {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   img.about-me {
@@ -631,5 +631,15 @@ img.contact:hover {
 
   .landing {
     padding-left: 1rem;
+  }
+  
+  .vert {
+    width: 90%;
+    margin: 10px;
+  }
+
+  img.companies {
+    width: 200px;
+    height: 100px;
   }
 }
