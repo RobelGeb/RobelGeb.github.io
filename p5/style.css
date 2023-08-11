@@ -171,6 +171,7 @@ h3 {
   position: fixed;
   width: 100%;
   top: 0;
+  right: 0;
   backdrop-filter: blur(5px);
   background-color: #67676741;
   z-index:1;
@@ -559,10 +560,15 @@ img.contact:hover {
 }
 
 @media screen and (max-width: 768px) { 
+  .navbar2 {
+    width:auto;
+    background-color: transparent;
+  }
+
   .navbar2-show {
+    width: auto;
     flex-direction: column-reverse;
     align-items: flex-end;
-    justify-content: flex-end;
   }  
 
   .navbar-li {
@@ -591,8 +597,8 @@ img.contact:hover {
   }
 
   img.slide, img.slide-dark {
-    height: 66px;
-    width: 115px;
+    height: 60px;
+    width: 110px;
   }
 
   .row {
@@ -620,6 +626,10 @@ img.contact:hover {
   }
 
   #words {
-    font-size: 22pt;
+    font-size: 28pt;
+  }
+
+  .landing {
+    padding-left: 1rem;
   }
 }
