@@ -329,9 +329,9 @@ h1.project-title {
 @keyframes spin {
   0% { content:"Designer"; }
   25% { content:"Developer"; }
-  50% { content: "Consulting Analyst"; }
+  50% { content:"Consulting Analyst"; }
   75% { content:"Seattle Based"; }
-  100% { content: "Designer"; }
+  100% { content:"Designer"; }
 }
 
 .intro_p {
@@ -588,7 +588,7 @@ img.contact:hover {
   }
 
   .menu-show {
-    rotate: 90deg;
+    rotate: -90deg;
   }
 
   .menu-items-show {
