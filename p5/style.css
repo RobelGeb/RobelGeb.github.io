@@ -599,10 +599,11 @@ img.contact:hover {
     background-color: transparent;
     border: none;
     height: auto;
+    filter: brightness(0.9);
   }
 
   #burgir-button:hover {
-    background-color: #9f9f9f;
+    filter: brightness(0.7);
   }
 
   img.slide, img.slide-dark {
@@ -620,6 +621,7 @@ img.contact:hover {
 
   .about-desc {
     flex-direction: column-reverse;
+    font-size: 16pt;
   }
 
   .greeting {
