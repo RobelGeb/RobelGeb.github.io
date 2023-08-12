@@ -38,7 +38,7 @@
                     <div id="wrapper">
                         <p id="words" data-aos="fade-up" data-aos-duration="1000"></p>
                         <div class="button">
-                            <button class="button-6" id="dark-button" onclick="darkMode()">🌙</button>
+                            <button class="button-6" id="dark-button" onclick="darkMode()"><img src="./img/moon.svg" height="40px"/></button>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,7 @@
        
        
        
-        <!-- TODO: make hamburger icon visible on dark mode set cards to a fixed width and add a "read more" button, and make sure my website is readable on mobile -->
-        
+        <!-- TODO: USE CARDS FOR PROJECTS -->
         
         
         
@@ -232,10 +231,10 @@
         <script> AOS.init(); </script>
         <script>
             function darkMode() {
-                if ( document.querySelector('#dark-button').innerHTML === "🌙" ) {
-                    document.querySelector('#dark-button').innerHTML = "☀️";
+                if ( document.querySelector('#dark-button').innerHTML === '<img src="./img/moon.svg" height="40px">' ) {
+                    document.querySelector('#dark-button').innerHTML = '<img src="./img/sun.svg" height="40px">';
                 } else {
-                    document.querySelector('#dark-button').innerHTML = "🌙";
+                    document.querySelector('#dark-button').innerHTML = '<img src="./img/moon.svg" height="40px">';
                 }
 
                 var bodyText = document.body;
