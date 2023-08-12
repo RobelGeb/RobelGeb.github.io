@@ -483,7 +483,7 @@ img.slide, img.slide-dark {
 }
 
 img.slide {
-  filter: grayscale(75%);
+  filter: grayscale(60%);
   filter: brightness(75%);
 }
 
