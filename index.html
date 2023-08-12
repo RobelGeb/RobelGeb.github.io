@@ -20,11 +20,11 @@
         <div class="lan-nav" id="home">
             <div class="navbar2">
                 <div class="menu-items">
-                    <div class="navbar-li"><a href="#contact">Contact</a></div>
-                    <div class="navbar-li"><a href="#skills">Skills</a></div>
-                    <div class="navbar-li"><a href="#projects">Projects</a></div>
-                    <div class="navbar-li"><a href="#about">About</a></div>
-                    <div class="navbar-li"><a href="#home"><b>Home</b></a></div> 
+                    <a href="#contact"><div class="navbar-li">Contact</div></a>
+                    <a href="#skills"><div class="navbar-li">Skills</div></a>
+                    <a href="#projects"><div class="navbar-li">Projects</div></a>
+                    <a href="#about"><div class="navbar-li">About</div></a>
+                    <a href="#home"><div class="navbar-li"><b>Home</b></div></a>
                 </div>
                 <div class="menu">
                     <button id="burgir-button" onclick="showMenu()">
@@ -66,7 +66,7 @@
                 <p class="about-desc" data-aos="fade-right" data-aos-duration="1000">
                     My name is Robel and I am a developer and UX/UI designer based in Seattle, WA. I recently graduated from the University of Washington
                     with a degree in Human Centered Design and Engineering, and I created this website to showcase some of my previous works.  <br /> <br /> 
-                    Outisde of programming and design I enjoy creating and listening to new music and playing soccer. 
+                    Outside of programming and design I enjoy creating and listening to new music and playing soccer. 
                 </p>
                 <img src="./img/self.jpg" class="about-me" height="300" data-aos="fade-left" data-aos-duration="1000"/>
             </div>
@@ -129,18 +129,16 @@
                         <button class="button-6" role="button" type="submit" style="width: 7rem">Projects</button>
                     </form>                
                 </div>
-                <img class="proj1img" src="/img/Arduino_Logo.svg" height="325" width="600"> 
-                    <img src="./img/logos/next-js.svg" class="hide" height="100" width="250" alt="" />
-                </img>
+                <img class="proj1img" src="/img/Arduino_Logo.svg" height="325" width="600" />
             </div>
         </div>       
 
         <hr class="skills">
 
-        <div class="skills-companies">
+        <div class="skills-companies" id="skills">
             <div class="skills">
                 <div class="project-title" data-aos="fade-up">
-                    <h1 class="project-title" id="skills">Skills + Tools</h1>
+                    <h1 class="project-title" >SKILLS</h1>
                     <img src="./img/tools_lineart.svg" class="graphic" width="70"/>
                 </div>
                 <div data-aos="fade-up">
@@ -203,7 +201,7 @@
             <hr class="vert" />
             <div class="companies">
                 <div class="project-title" data-aos="fade-up" >
-                    <h1 class="project-title" id="companies">Companies I've Worked With</h1>
+                    <h1 class="project-title" id="companies">WHERE I'VE WORKED</h1>
                 </div>
                 <div class="companies-images" data-aos="fade-up">
                     <img src="./img/logos/microsoft.svg" class="companies" id="msft"/>
@@ -243,13 +241,19 @@
                 var bodyText = document.body;
                 var buttonText = document.getElementsByClassName("button-6");
                 var navbarText = document.getElementsByClassName("navbar-li");
-                console.log(buttonText.length);
+                var hideText = document.getElementsByClassName(".hide");
+
+                console.log(hideText.length);
+
                 bodyText.classList.toggle("dark-mode-body");
                 for (let i = 0; i < navbarText.length; i++) {
                     buttonText[i].classList.toggle("dark-mode-button-6");
                 }
                 for (let i = 0; i < navbarText.length; i++) {
                     navbarText[i].classList.toggle("dark-mode-lan-nav");
+                }
+                for (let i = 0; i < hideText.length; i++) {
+                    hideText[i].classList.toggle("dark-mode-hide");
                 }
             }
 
