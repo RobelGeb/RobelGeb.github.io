@@ -10,8 +10,6 @@ function darkMode() {
     var navbarText = document.getElementsByClassName("navbar-li");
     var hideText = document.getElementsByClassName("hide");
 
-    console.log(hideText.length);
-
     bodyText.classList.toggle("dark-mode-body");
     for (let i = 0; i < navbarText.length; i++) {
         buttonText[i].classList.toggle("dark-mode-button-6");
@@ -42,3 +40,6 @@ function showMenu() {
 function smoothScroll(id) {
     document.getElementById(id).scrollIntoView( {behavior: "smooth"} );
 }
+
+//  ---------------CAROUSEL FUNCTIONS---------------
+

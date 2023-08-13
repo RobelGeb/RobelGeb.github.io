@@ -68,6 +68,11 @@ h1 {
   height: 9rem;
 }
 
+/* -----------CAROUSEL STYLING------------ */
+
+
+/* -----------OLD PROJECT CARD STYLING------------ */
+
 .projects {
   display: flex;
   padding-top: 2rem;
@@ -148,6 +153,8 @@ h3 {
   border-bottom: 2px solid #75634696;
 }
 
+/* -----------LANDING PAGE STYLING------------ */
+
 .lan-nav {
   background-color: #756346b0;
   /* background: rgb(36,36,36); */
@@ -200,71 +207,6 @@ h3 {
   border: solid 2px #5ec4ff;
   padding: 20px;
   width: 50rem;
-}
-
-.about-me {
-  display: flex;
-  flex-direction: column;
-  padding: 0 8%;
-}
-
-img.about-me {
-  justify-content: flex-end;
-  border-radius: 50%;
-  margin-left: auto;
-}
-
-.about-desc {
-  display: flex;
-  flex-direction: row;
-  font-size: 20pt;
-  align-items: center;
-  padding: 0;
-  line-height: 40px
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-hr {
-  border-top: 1px solid #bbb;
-  width: 90%;
-  margin-top: 5rem;
-}
-
-.vert {
-  margin: 50px;
-  width: 0.1px;
-  border-left: 1px solid #bbb;
-}
-
-.project-title {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-h1.project-title {
-  padding-right: 2rem;
-}
-
-.projects-sub {
-  display: flex;
-  justify-content: center;
-  padding-top: 0;
-  padding-bottom: 3rem;
-  margin-bottom: 0;
-}
-
-.projectsA {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: black;
-  justify-content: center;
-  justify-items: center;
-  padding: 4rem 0;
 }
 
 #wrapper {
@@ -334,6 +276,79 @@ h1.project-title {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+/* -----------ABOUT ME STYLING------------ */
+
+#about {
+  padding-bottom: 10%;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8%;
+}
+
+img.about-me {
+  justify-content: flex-end;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: row;
+  font-size: 20pt;
+  align-items: center;
+  padding: 0;
+  line-height: 40px
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border-top: 1px solid #bbb;
+  width: 90%;
+  margin-top: 5rem;
+}
+
+.vert {
+  margin: 50px;
+  width: 0.1px;
+  border-left: 1px solid #bbb;
+}
+
+.project-title {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+h1.project-title {
+  padding-right: 2rem;
+}
+
+.projects-sub {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+}
+
+.projectsA {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: black;
+  justify-content: center;
+  justify-items: center;
+  padding: 4rem 0;
+}
+
+/* -----------BUTTON STYLING------------ */
 
 div.button {
   display: flex;
@@ -441,9 +456,9 @@ textarea {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding-bottom: 10px;
-  width: 60px;
-  height: 60px;
+  /* padding-bottom: 10px; */
+  width: 75px;
+  height: 75px;
 }
 
 .footer-spell-active {
