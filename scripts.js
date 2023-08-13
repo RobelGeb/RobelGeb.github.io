@@ -38,3 +38,7 @@ function showMenu() {
         items[i].classList.toggle("navbar-li-show");
     }
 }
+
+function smoothScroll(id) {
+    document.getElementById(id).scrollIntoView( {behavior: "smooth"} );
+}

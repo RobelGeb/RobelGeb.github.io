@@ -21,11 +21,11 @@
         <div class="lan-nav" id="home">
             <div class="navbar2">
                 <div class="menu-items">
-                    <a href="#contact"><div class="navbar-li">Contact</div></a>
-                    <a href="#skills"><div class="navbar-li">Skills/XP</div></a>
-                    <a href="#projects"><div class="navbar-li">Projects</div></a>
-                    <a href="#about"><div class="navbar-li">About</div></a>
-                    <a href="#home"><div class="navbar-li"><b>Home</b></div></a>
+                    <a onclick="smoothScroll('contact')"><div class="navbar-li">Contact</div></a>
+                    <a onclick="smoothScroll('skills')"><div class="navbar-li">Skills/XP</div></a>
+                    <a onclick="smoothScroll('projects')"><div class="navbar-li">Projects</div></a>   
+                    <a onclick="smoothScroll('about')"><div class="navbar-li">About</div></a>
+                    <a onclick="smoothScroll('landing')"><div class="navbar-li"><b>Home</b></div></a>
                 </div>
                 <div class="menu">
                     <button id="burgir-button" onclick="showMenu()">
@@ -33,7 +33,7 @@
                     </button>
                 </div>
             </div>
-            <div class="landing">
+            <div class="landing" id="landing">
                 <h1 class="greeting" data-aos="fade-up" data-aos-duration="1000">ROBEL GEBREMICHAEL</h1>                
                 <div class="intro_p" >
                     <div id="wrapper">
@@ -48,12 +48,7 @@
        
        
        
-       
-       
         <!-- TODO: USE CARDS FOR PROJECTS -->
-        
-        
-        
         
         
         
@@ -227,8 +222,17 @@
                 </a>
             </div>
         </div>
-
-        <div class="footer">a website by Robel Gebremichael ∞</div>
+        <div class="footer">
+            <div class="footer-note">
+            a website by Robel Gebremichael ∞
+            </div>
+            <div class="footer-spell">
+                <img src="./img/wand.svg" class="footer-spell"/>
+                <img src="./img/wand_active.svg" class="footer-spell-active" onclick="smoothScroll('home')"/>
+            </div>
+        </div>
+        
+        
         
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script> AOS.init(); </script>

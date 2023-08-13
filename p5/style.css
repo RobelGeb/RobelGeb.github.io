@@ -2,11 +2,9 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #e1e1e1;
     color: black;
-    animation: fadeInAnimation ease 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .dark-mode-body {
@@ -125,10 +123,6 @@ p.inside-proj {
   line-height: 25pt;
   height: 9rem;
 }
-
-/* .proj1:hover, .proj2:hover {
-  background-color: #a1a1a1;
-} */
 
 img.proj1img {
   border-radius: 10px;
@@ -350,9 +344,8 @@ div.button {
 
 #dark-button {
   box-shadow: none;
+  border: none;
 }
-
-
 
 .button-6 {
   align-items: center;
@@ -389,7 +382,6 @@ div.button {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   background-color: #75634696;
-  border-radius: 5px;
   color: white;
   transform: translateY(-4px);
 
@@ -440,7 +432,27 @@ textarea {
 }
 
 .footer {
-  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-spell, .footer-spell-active {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.footer-spell-active {
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.footer-spell-active:hover {
+  opacity: 1;
 }
 
 div.contact-section {
@@ -494,6 +506,7 @@ img.slide {
 
 img.slide-dark {
   filter: opacity(0.5);
+  transition: 0.2s ease-in-out;
 }
 
 img.slide:hover, img.slide-dark:hover {
@@ -543,6 +556,7 @@ img.companies {
 img.contact {
   height: 50px;
   width: 100px;
+  transition: 0.2s ease-in-out;
 }
 
 img.contact:hover {
