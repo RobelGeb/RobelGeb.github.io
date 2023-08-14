@@ -73,7 +73,7 @@ h1 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
