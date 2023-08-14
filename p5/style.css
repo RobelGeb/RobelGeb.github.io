@@ -403,7 +403,8 @@ h3 {
   height: 10rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  padding-bottom: 1.5rem;
 }
 
 /* -----------ABOUT ME STYLING------------ */
@@ -563,11 +564,8 @@ textarea {
 }
 
 .row {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 10% 4rem 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 80%;
   resize: both;
 }
@@ -614,7 +612,8 @@ div.slide {
   flex-direction: column;
   align-items: center;
   color: black;
-  height: 100px;
+  height: 175px;
+  width: 100%;
   padding-bottom: 2rem;
 }
 
@@ -715,6 +714,19 @@ img.contact:hover {
   flex-direction: row-reverse;
 }
 
+@media screen and (max-width: 1130px) {
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .projectsA {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 768px) { 
   .navbar2 {
     width:auto;
@@ -761,13 +773,17 @@ img.contact:hover {
     filter: brightness(0.7);
   }
 
-  img.slide, img.slide-dark {
-    height: 60px;
-    width: 110px;
+  .row {
+    width: 100%;
   }
 
-  .row {
-    padding-bottom: 1rem;
+  div.slide {
+    padding-bottom: 0rem;
+  }
+
+  img.slide, img.slide-dark {
+    height: 75px;
+    width: 130px;
   }
 
   .skills-companies {
