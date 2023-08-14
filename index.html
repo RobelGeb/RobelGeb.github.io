@@ -8,13 +8,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <!-- SWIPER CSS -->
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+        
+        <!-- REGULAR CSS -->
         <link href="p5/style.css" media="screen" rel="stylesheet" type="text/css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <script src="scripts.js"></script>
+
+
     </head>
     
     <body> 
@@ -50,8 +55,80 @@
        
         <!-- TODO: USE CARDS FOR PROJECTS -->
         
-
         
+        <div class="newproj">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img class="card-img" src="/img/cryptoscreenshot.png"/>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">CryptoPricer</h2>
+                                <p class="description-card">1/4</p>
+                                <form action="https://github.com/RobelGeb/cryptopricer" target="_blank">
+                                    <button class="button-6" role="button" type="submit">GitHub</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img class="card-img" src="/img/chatterscreenshot.png"/>
+                                    <!--<img src="images/profile2.jpg" alt="" class="card-img">-->
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Chatter</h2>
+                                <p class="description-card">2/4</p>
+                                <form action="https://github.com/RobelGeb/chatter2021" target="_blank">
+                                    <button class="button-6" role="button" type="submit">GitHub</button>
+                                </form>   
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img class="card-img" src="./img/auddlogo.png"/>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Lyric Finder</h2>
+                                <p class="description-card">3/4</p>
+                                <form action="https://github.com/RobelGeb/finalproject-RobelGeb" target="_blank">
+                                    <button class="button-6" role="button" type="submit">GitHub</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img class="card-img" src="/img/Arduino_Logo.svg" />
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Arduino</h2>
+                                <p class="description-card">4/4</p>
+                                <form action="portfolio.html">
+                                    <button class="button-6" role="button" type="submit" style="width: 7rem">Projects</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
 
         <!-- TODO: USE CARDS FOR PROJECTS -->
 
@@ -235,8 +312,11 @@
             </div>
         </div>
         
-        
-        
+     
+        <!-- SWIPER SCRIPT -->
+        <script src="swiper-bundle.min.js"></script>
+        <!-- REGULAR SCRIPTS -->
+        <script src="scripts.js"></script>   
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script> AOS.init(); </script>
     </body>
