@@ -116,7 +116,7 @@ h1 {
   height: 100%;
   width: 100%;
   background-color: #756346b0;
-  border-radius: 25px 25px 0 25px;
+  border-radius: 10px;
 }
 .overlay::before,
 .overlay::after{
@@ -126,11 +126,14 @@ h1 {
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #ccc;
+  background-color: #FFF;
 }
 .overlay::after{
   border-radius: 0 25px 0 0;
   background-color: #FFF;
+}
+.dark-mode-overlay::before, .dark-mode-overlay::after {
+  background-color: #606060
 }
 .card-image{
   position: relative;
@@ -146,9 +149,12 @@ h1 {
   border: 1px solid #75634696;
 }
 .name{
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   color: #333;
+}
+.dark-mode-name {
+  color: #ccc;
 }
 .description{
   font-size: 14px;
@@ -263,6 +269,10 @@ img.proj1img:hover + .hide{
 h2 {
   text-decoration: underline;
   text-decoration-color: #75634696;
+}
+
+.dark-mode-h2 {
+  text-decoration-color: #c8b79896;
 }
 
 h3 {

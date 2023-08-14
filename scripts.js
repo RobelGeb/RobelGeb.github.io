@@ -10,6 +10,9 @@ function darkMode() {
     var navbarText = document.getElementsByClassName("navbar-li");
     var hideText = document.getElementsByClassName("hide");
     var cardColor = document.getElementsByClassName("card");
+    var overlay = document.getElementsByClassName("overlay");
+    var h2Name = document.getElementsByClassName("name");
+    var h2 = document.getElementsByTagName("h2");
 
     bodyText.classList.toggle("dark-mode-body");
     for (let i = 0; i < navbarText.length; i++) {
@@ -23,6 +26,15 @@ function darkMode() {
     }
     for (let i = 0; i < cardColor.length; i++) {
         cardColor[i].classList.toggle("dark-mode-card");
+    }
+    for (let i = 0; i < overlay.length; i++) {
+        overlay[i].classList.toggle("dark-mode-overlay");
+    }
+    for (let i = 0; i < h2Name.length; i++) {
+        h2Name[i].classList.toggle("dark-mode-name");
+    }
+    for (let i = 0; i< h2.length; i++) {
+        h2[i].classList.toggle("dark-mode-h2");
     }
 }
 
