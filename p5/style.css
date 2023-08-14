@@ -26,8 +26,7 @@ canvas {
 }
 
 p {
-  padding-top: 4rem;
-  font-size: 12pt;
+  font-size: 15pt;
 }
 
 ul {
@@ -385,7 +384,7 @@ h3 {
 @keyframes spin {
   0% { content:"Designer"; }
   25% { content:"Developer"; }
-  50% { content:"Consulting Analyst"; }
+  50% { content:"Consultant"; }
   75% { content:"Seattle Based"; }
   100% { content:"Designer"; }
 }
