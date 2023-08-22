@@ -724,6 +724,10 @@ img.contact:hover {
 @media screen and (max-width: 560px) {
   .projectsA {
     grid-template-columns: repeat(2, 1fr);
+
+  }
+  .row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
