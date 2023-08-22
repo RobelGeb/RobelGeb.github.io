@@ -821,8 +821,11 @@ img.contact:hover {
 @media screen and (max-width: 600px) {
   .projectsA {
     grid-template-columns: repeat(2, 1fr);
-
   }
+
+.skills-companies {
+  padding: 0 2rem;
+}
 
   .row {
     grid-template-columns: repeat(4, 1fr);
